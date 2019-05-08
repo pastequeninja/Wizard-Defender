@@ -1,0 +1,1349 @@
+end_game/display/display_text_end.c:    char *tmp = malloc(sizeof(char) * (my_strlen(wave->str) + 5));
+end_game/display/display_text_end.c:    tmp = my_str_cat(tmp, wave->str);
+end_game/display/display_text_end.c:    sfText_setString(wave->text, tmp);
+end_game/display/display_text_end.c:    sfText_setColor(wave->text, wave->color);
+end_game/display/display_text_end.c:    sfRenderWindow_drawText(window, wave->text, NULL);
+end_game/display/display_scene_object_for_end.c:    for (; go->prev; go = go->prev);
+end_game/display/display_scene_object_for_end.c:    for (; go; go = go->next) {
+end_game/display/display_scene_object_for_end.c:        sfSprite_setTexture(go->sprite, go->texture, sfFalse);
+end_game/display/display_scene_object_for_end.c:        sfSprite_setTextureRect(go->sprite, go->rect);
+end_game/display/display_scene_object_for_end.c:        sfSprite_setPosition(go->sprite, go->pos);
+end_game/display/display_scene_object_for_end.c:        sfRenderWindow_drawSprite(window, go->sprite, NULL);
+end_game/display/display_scene_object_for_end.c:    for (; rocket->prev; rocket = rocket->prev);
+end_game/display/display_scene_object_for_end.c:    for (; rocket; rocket = rocket->next) {
+end_game/display/display_scene_object_for_end.c:        sfSprite_setTexture(rocket->sprite, rocket->texture, sfFalse);
+end_game/display/display_scene_object_for_end.c:        sfSprite_setPosition(rocket->sprite, rocket->pos);
+end_game/display/display_scene_object_for_end.c:        sfRenderWindow_drawSprite(window, rocket->sprite, NULL);
+end_game/display/display_scene_object_for_end.c:    for (; heart; heart = heart->next) {
+end_game/display/display_scene_object_for_end.c:        sfSprite_setTextureRect(heart->sprite, heart->rect);
+end_game/display/display_scene_object_for_end.c:        sfSprite_setTexture(heart->sprite, heart->texture, sfFalse);
+end_game/display/display_scene_object_for_end.c:        sfSprite_setPosition(heart->sprite, heart->pos);
+end_game/display/display_scene_object_for_end.c:        sfRenderWindow_drawSprite(window, heart->sprite, NULL);
+end_game/display/display_scene_object_for_end.c:    display_background(window, sc->background);
+end_game/display/display_scene_object_for_end.c:    display_game_object_for_end(window, sc->game_object);
+end_game/display/display_scene_object_for_end.c:    if (sc->rocket)
+end_game/display/display_scene_object_for_end.c:        display_rocket_end(window, sc->rocket);
+end_game/display/display_scene_object_for_end.c:    if (sc->heart)
+end_game/display/display_scene_object_for_end.c:        display_heart_end(window, sc->heart);
+end_game/display/display_background_end.c:    money->str = my_strdup(nbr_to_str(money->nb));
+end_game/display/display_background_end.c:    if (!(tmp = malloc(sizeof(char) * (my_strlen(money->str) + 4))))
+end_game/display/display_background_end.c:    tmp = my_str_cat(tmp, money->str);
+end_game/display/display_background_end.c:    sfText_setString(money->text, tmp);
+end_game/display/display_background_end.c:    sfText_setColor(money->text, money->color);
+end_game/display/display_background_end.c:    sfRenderWindow_drawText(window, money->text, NULL);
+end_game/display/display_background_end.c:    free(money->str);
+end_game/display/display_background_end.c:    char *tmp = malloc(sizeof(char) * (my_strlen(wave->str) + 5));
+end_game/display/display_background_end.c:    tmp = my_str_cat(tmp, wave->str);
+end_game/display/display_background_end.c:    tmp = my_str_cat(tmp, nbr_to_str(wave->nb));
+end_game/display/display_background_end.c:    sfText_setString(wave->text, tmp);
+end_game/display/display_background_end.c:    sfText_setColor(wave->text, wave->color);
+end_game/display/display_background_end.c:    sfRenderWindow_drawText(window, wave->text, NULL);
+end_game/display/display_background_end.c:    if (display_money_end(window, text->money) == FAILURE)
+end_game/display/display_background_end.c:    if (display_wave_end(window, text->wave) == FAILURE)
+end_game/display/display_background_end.c:    display_scene_object_for_end(window, scene->objs);
+end_game/display/display_background_end.c:    display_button(window, scene->button);
+end_game/display/display_background_end.c:    if (display_texts_for_end(window, scene->texts) == FAILURE)
+end_game/display/display_end.c:    if (sfClock_getElapsedTime(ch->clock).microseconds > ch->time) {
+end_game/display/display_end.c:        ch->rect.left += 512;
+end_game/display/display_end.c:        sfClock_restart(ch->clock);
+end_game/display/display_end.c:    if (ch->rect.left == 4096)
+end_game/display/display_end.c:        ch->rect.left = 0;
+end_game/display/display_end.c:    sfSprite_setTexture(ch->sprite, ch->texture, sfFalse);
+end_game/display/display_end.c:    sfSprite_setTextureRect(ch->sprite, ch->rect);
+end_game/display/display_end.c:    sfSprite_setPosition(ch->sprite, ch->pos);
+end_game/display/display_end.c:    sfRenderWindow_drawSprite(window, ch->sprite, NULL);
+end_game/display/display_end.c:    sfSprite_setTexture(ob->sprite, ob->texture, sfFalse);
+end_game/display/display_end.c:    sfSprite_setTextureRect(ob->sprite, ob->rect);
+end_game/display/display_end.c:    sfSprite_setPosition(ob->sprite, ob->pos);
+end_game/display/display_end.c:    sfRenderWindow_drawSprite(window, ob->sprite, NULL);
+end_game/display/display_end.c:    for (; button; button = button->next) {
+end_game/display/display_end.c:        sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+end_game/display/display_end.c:        sfSprite_setTextureRect(button->sprite, button->rect);
+end_game/display/display_end.c:        sfSprite_setPosition(button->sprite, button->pos);
+end_game/display/display_end.c:        sfRenderWindow_drawSprite(window, button->sprite, NULL);
+end_game/display/display_end.c:    for (; obj->next; obj = obj->next);
+end_game/display/display_end.c:        obj->rect = init_intrect(0, 0, 400 / 3, 246);
+end_game/display/display_end.c:        obj->rect = init_intrect(400 / 3, 0, 400 / 3, 246);
+end_game/display/display_end.c:        obj->rect = init_intrect(400 / 3 * 2, 0, 400 / 3, 246);
+end_game/display/display_end.c:    sfSprite_setTexture(obj->sprite, obj->texture, sfFalse);
+end_game/display/display_end.c:    sfSprite_setTextureRect(obj->sprite, obj->rect);
+end_game/display/display_end.c:    sfSprite_setPosition(obj->sprite, obj->pos);
+end_game/display/display_end.c:    sfRenderWindow_drawSprite(window, obj->sprite, NULL);
+end_game/display/display_end.c:    if (display_background_end(window, (*scene)->prev) == FAILURE)
+end_game/display/display_end.c:    display_board(window, (*scene)->objs->game_object);
+end_game/display/display_end.c:    display_character(window, (*scene)->objs->game_object->next);
+end_game/display/display_end.c:    display_button_end(window, (*scene)->button);
+end_game/display/display_end.c:    if ((*scene)->prev->texts->wave->nb == 16)
+end_game/display/display_end.c:	(*scene)->prev->texts->wave->nb = 15;
+end_game/display/display_end.c:    if ((*scene)->prev->texts->wave->nb >= 5)
+end_game/display/display_end.c:        display_medal(window, (*scene)->objs->game_object, \
+end_game/display/display_end.c:        (*scene)->prev->texts->wave->nb);
+end_game/display/display_end.c:    display_text_end(window, (*scene)->texts->wave, \
+end_game/display/display_end.c:    (*scene)->prev->texts->wave->nb);
+end_game/init/init_end_obj.c:        if (!(game_object->texture = \
+end_game/init/init_end_obj.c:        game_object->rect = init_intrect(0, 0, 900, 460);
+end_game/init/init_end_obj.c:        game_object->size = init_vec2f(900, 460);
+end_game/init/init_end_obj.c:        game_object->pos = init_vec2f(500, 300);
+end_game/init/init_end_obj.c:        if (!(game_object->texture = \
+end_game/init/init_end_obj.c:        game_object->pos = init_vec2f(690, 300);
+end_game/init/init_end_obj.c:        game_object->rect = init_intrect(0, 0, 512, 512);
+end_game/init/init_end_obj.c:        game_object->size = init_vec2f(512, 512);
+end_game/init/init_end_obj.c:        game_object->clock = sfClock_create();
+end_game/init/init_end_obj.c:        game_object->time = 83000;
+end_game/init/init_end_obj.c:    game_object->prev = NULL;
+end_game/init/init_end_obj.c:        game_object->sprite = sfSprite_create();
+end_game/init/init_end_obj.c:        if (!(game_object->next = malloc(sizeof(game_object_t))))
+end_game/init/init_end_obj.c:        game_object->next->prev = game_object;
+end_game/init/init_end_obj.c:        game_object = game_object->next;
+end_game/init/init_end_obj.c:    game_object->next = NULL;
+end_game/init/init_end_obj.c:    for (; game_object->prev; game_object = game_object->prev);
+end_game/init/init_end_obj.c:    for (; obj->next; obj = obj->next);
+end_game/init/init_end_obj.c:    if (!(obj->next = malloc(sizeof(game_object_t))))
+end_game/init/init_end_obj.c:    obj->next->prev = obj;
+end_game/init/init_end_obj.c:    obj = obj->next;
+end_game/init/init_end_obj.c:    if (!(obj->texture = \
+end_game/init/init_end_obj.c:    if (!(obj->sprite = sfSprite_create()))
+end_game/init/init_end_obj.c:    obj->pos = init_vec2f(600, 310);
+end_game/init/init_end_obj.c:    obj->size = init_vec2f(400 / 3, 246);
+end_game/init/init_end_obj.c:    obj->next = NULL;
+end_game/init/init_end_obj.c:    for (; obj->prev; obj = obj->prev);
+end_game/init/init_end_obj.c:    if (!(scene_object->game_object = init_game_object_end()))
+end_game/init/init_end_obj.c:    if (!(scene_object->game_object = init_medal(scene_object->game_object)))
+end_game/init/init_end_button.c:        button->pos = init_vec2f(1050, 530);
+end_game/init/init_end_button.c:        button->size = init_vec2f(320, 213);
+end_game/init/init_end_button.c:        button->rect = init_intrect(320, 0, 320, 213);
+end_game/init/init_end_button.c:        button->callback = &retry_game;
+end_game/init/init_end_button.c:        button->pos = init_vec2f(520, 530);
+end_game/init/init_end_button.c:        button->size = init_vec2f(320, 213);
+end_game/init/init_end_button.c:        button->rect = init_intrect(0, 0, 320, 213);
+end_game/init/init_end_button.c:        button->callback = &return_to_home;
+end_game/init/init_end_button.c:    button->prev = NULL;
+end_game/init/init_end_button.c:        button->activate = false;
+end_game/init/init_end_button.c:        button->sprite = sfSprite_create();
+end_game/init/init_end_button.c:        if (!(button->texture = \
+end_game/init/init_end_button.c:        if (!(button->next = malloc(sizeof(button_t))))
+end_game/init/init_end_button.c:        button->next->prev = button;
+end_game/init/init_end_button.c:        button = button->next;
+end_game/init/init_end_button.c:    button->next = NULL;
+end_game/init/init_end_button.c:    for (; button->prev; button = button->prev);
+end_game/init/init_end.c:    if (!(wave->str = my_strdup("Wave ")))
+end_game/init/init_end.c:    if (!(wave->font = sfFont_createFromFile("fonts/sett.ttf")))
+end_game/init/init_end.c:    if (!(wave->text = sfText_create()))
+end_game/init/init_end.c:    wave->pos = init_vec2f(1020, 370);
+end_game/init/init_end.c:    wave->color = init_color(255, 200, 0, 255);
+end_game/init/init_end.c:    sfText_setFont(wave->text, wave->font);
+end_game/init/init_end.c:    sfText_setCharacterSize(wave->text, 85);
+end_game/init/init_end.c:    sfText_setPosition(wave->text, wave->pos);
+end_game/init/init_end.c:    if (!(scene->next = malloc(sizeof(scene_t))))
+end_game/init/init_end.c:    scene->next->prev = scene;
+end_game/init/init_end.c:    scene = scene->next;
+end_game/init/init_end.c:    scene->type = END;
+end_game/init/init_end.c:    if (!(scene->objs = init_end_obj()))
+end_game/init/init_end.c:    if (!(scene->button = init_end_button()))
+end_game/init/init_end.c:    if (!(scene->texts = malloc(sizeof(text_t))))
+end_game/init/init_end.c:    if (!(scene->texts->wave = init_end_texts()))
+end_game/init/re_init_new_game.c:    for (; button->next; button = button->next);
+end_game/init/re_init_new_game.c:    button->rect.left = 0;
+end_game/init/re_init_new_game.c:    for (; button->prev; button = button->prev);
+end_game/init/re_init_new_game.c:    scene->texts->wave->nb = 1;
+end_game/init/re_init_new_game.c:    scene->texts->money->nb = 10;
+end_game/init/re_init_new_game.c:    scene->objs->nb_character = 3;
+end_game/init/re_init_new_game.c:    scene->objs->life = 3;
+end_game/init/re_init_new_game.c:    scene->objs->speed = 1;
+end_game/init/re_init_new_game.c:    scene->objs->nb_malloc = 3;
+end_game/init/re_init_new_game.c:    if (!(scene->objs->game_object = malloc(sizeof(game_object_t))))
+end_game/init/re_init_new_game.c:    if (!(scene->objs->game_object = \
+end_game/init/re_init_new_game.c:        init_game_object(scene->objs->game_object)))
+end_game/init/re_init_new_game.c:    scene->objs->rocket = NULL;
+end_game/init/re_init_new_game.c:    scene->objs->tower_move = NULL;
+end_game/init/re_init_new_game.c:    scene->button = change_fungers(scene->button);
+end_game/destroy/destroy_for_new_game.c:    for (; go->prev; go = go->prev);
+end_game/destroy/destroy_for_new_game.c:        if (go->tower == NO_TOWER) {
+end_game/destroy/destroy_for_new_game.c:            sfText_destroy(go->text);
+end_game/destroy/destroy_for_new_game.c:            sfFont_destroy(go->font);
+end_game/destroy/destroy_for_new_game.c:            sfClock_destroy(go->clock);
+end_game/destroy/destroy_for_new_game.c:        sfTexture_destroy(go->texture);
+end_game/destroy/destroy_for_new_game.c:        sfSprite_destroy(go->sprite);
+end_game/destroy/destroy_for_new_game.c:        go = go->next;
+end_game/destroy/destroy_for_new_game.c:            free(go->prev);
+end_game/destroy/destroy_for_new_game.c:    for (; rocket->prev; rocket = rocket->prev);
+end_game/destroy/destroy_for_new_game.c:        sfTexture_destroy(rocket->texture);
+end_game/destroy/destroy_for_new_game.c:        sfSprite_destroy(rocket->sprite);
+end_game/destroy/destroy_for_new_game.c:        rocket = rocket->next;
+end_game/destroy/destroy_for_new_game.c:            free(rocket->prev);
+end_game/destroy/destroy_for_new_game.c:    sfMusic_destroy(tower_move->music);
+end_game/destroy/destroy_for_new_game.c:    sfTexture_destroy(tower_move->texture);
+end_game/destroy/destroy_for_new_game.c:    sfSprite_destroy(tower_move->sprite);
+end_game/destroy/destroy_for_new_game.c:    sfCircleShape_destroy(tower_move->circle);
+end_game/destroy/destroy_for_new_game.c:    scene_object_t *obj = scene->objs;
+end_game/destroy/destroy_for_new_game.c:    destroy_game_object(obj->game_object);
+end_game/destroy/destroy_for_new_game.c:    destroy_rocket(obj->rocket);
+end_game/destroy/destroy_for_new_game.c:    destroy_tower_move(obj->tower_move);
+end_game/events/button_clicked_end.c:    button_t *button = scene->button;
+end_game/events/button_clicked_end.c:    for (; button; button = button->next) {
+end_game/events/button_clicked_end.c:            scene = button->callback(scene);
+end_game/events/events_button_home.c:    scene = scene->prev;
+end_game/events/events_button_home.c:    scene = scene->prev;
+end_game/events/events_button_retry.c:    scene = scene->prev;
+launch_game.c:    if (!(scene->next = malloc(sizeof(scene_t))))
+launch_game.c:    scene->next->prev = scene;
+launch_game.c:    scene = scene->next;
+launch_game.c:    scene->next = NULL;
+launch_game.c:    for (; scene->prev; scene = scene->prev);
+launch_game.c:    if ((*scene)->type == RULES)
+launch_game.c:    if ((*scene)->type == INTRO)
+launch_game.c:    if ((*scene)->type == MENU) {
+launch_game.c:    if ((*scene)->type == GAME)
+launch_game.c:    if ((*scene)->type == SETTINGS)
+launch_game.c:    if ((*scene)->type == END)
+launch_game.c:    if ((*scene)->type == SETT)
+launch_game.c:    sfMusic_play(scene->menu_background->music);
+menu/buttons/initialize_buttons.c:    button->texture = sfTexture_createFromFile(str, NULL);
+menu/buttons/initialize_buttons.c:    button->pos.y = a;
+menu/buttons/initialize_buttons.c:    button->pos.x = b;
+menu/buttons/initialize_buttons.c:    sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+menu/buttons/initialize_buttons.c:    sfSprite_setPosition(button->sprite, button->pos);
+menu/buttons/initialize_buttons.c:    button->sprite = sfSprite_create();
+menu/buttons/initialize_buttons.c:        button->type = MENU_BUTTON_START;
+menu/buttons/initialize_buttons.c:        button->music = sfMusic_createFromFile("musics/blow.ogg");
+menu/buttons/initialize_buttons.c:        button->type = MENU_BUTTON_SETTING;
+menu/buttons/initialize_buttons.c:        button->type = MENU_BUTTON_EXIT;
+menu/buttons/initialize_buttons.c:        button->type = MENU_BUTTON_HELP;
+menu/buttons/initialize_buttons.c:    button->prev = NULL;
+menu/buttons/initialize_buttons.c:        button->blow = 0;
+menu/buttons/initialize_buttons.c:        button->next = malloc(sizeof(menu_button_t));
+menu/buttons/initialize_buttons.c:        button->next->prev = button;
+menu/buttons/initialize_buttons.c:        button = button->next;
+menu/buttons/initialize_buttons.c:    button->next = NULL;
+menu/buttons/initialize_buttons.c:    for (;button->prev != NULL; button = button->prev);
+menu/buttons/exit_buttons.c:    for (; button->type != MENU_BUTTON_EXIT; button = button->next);
+menu/buttons/exit_buttons.c:        button->texture = \
+menu/buttons/exit_buttons.c:        button->texture = \
+menu/buttons/buttons_idle.c:** idel button -> change
+menu/buttons/buttons_idle.c:    button->texture = sfTexture_createFromFile(str, NULL);
+menu/buttons/buttons_idle.c:    button->sprite = sfSprite_create();
+menu/buttons/buttons_idle.c:    sfSprite_setPosition(button->sprite, button->pos);
+menu/buttons/buttons_idle.c:    sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+menu/buttons/buttons_idle.c:    sfRenderWindow_drawSprite(window, button->sprite, NULL);
+menu/buttons/buttons_idle.c:    for (;button->prev != NULL; button = button->prev);
+menu/buttons/buttons_idle.c:    for (;button->type != MENU_BUTTON_START; button = button->next);
+menu/buttons/buttons_idle.c:    for (;button->prev != NULL; button = button->prev);
+menu/buttons/buttons_idle.c:    for (;button->type != MENU_BUTTON_HELP; button = button->next);
+menu/buttons/buttons_idle.c:    for (;button->prev != NULL; button = button->prev);
+menu/buttons/buttons_idle.c:    for (;button->type != MENU_BUTTON_SETTING; button = button->next);
+menu/buttons/event_buttons.c:    for (;button->prev != NULL; button = button->prev);
+menu/buttons/event_buttons.c:    for (;button->type != MENU_BUTTON_START; button = button->next);
+menu/buttons/event_buttons.c:    button->texture = sfTexture_createFromFile("sprites/menu/hey.png", NULL);
+menu/buttons/event_buttons.c:    button->rect.top = 0;
+menu/buttons/event_buttons.c:    button->rect.left = 0;
+menu/buttons/event_buttons.c:    button->rect.width = 512;
+menu/buttons/event_buttons.c:    button->rect.height = 512;
+menu/buttons/event_buttons.c:    button->pos.y = 250;
+menu/buttons/event_buttons.c:    button->pos.x = 700;
+menu/buttons/event_buttons.c:    button->sprite = sfSprite_create();
+menu/buttons/event_buttons.c:    menu_button_t *button = (*scene)->menu_background->button;
+menu/buttons/event_buttons.c:    if (button->blow == 2) {
+menu/buttons/event_buttons.c:        button->blow = 1;
+menu/buttons/event_buttons.c:        button->pos.x -= 10;
+menu/buttons/event_buttons.c:        button->rect.left += 500;
+menu/buttons/event_buttons.c:    sfSprite_setPosition(button->sprite, button->pos);
+menu/buttons/event_buttons.c:    sfSprite_setTextureRect(button->sprite, button->rect);
+menu/buttons/event_buttons.c:    sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+menu/buttons/event_buttons.c:    sfRenderWindow_drawSprite(window, button->sprite, NULL);
+menu/buttons/event_buttons.c:    if (button->rect.left >= 4000)
+menu/buttons/event_buttons.c:        mouse_pos.y >= 50 && mouse_pos.y <= 110 && (*scene)->type == MENU)
+menu/buttons/event_buttons.c:        (*scene)->type = SETTINGS;
+menu/buttons/event_buttons.c:        (*scene)->type = RULES;
+menu/buttons/event_buttons.c:            button->blow = 2;
+menu/fill_menu.c:    if ((menu->wizards = malloc(sizeof(wizard_t))) == NULL)
+menu/fill_menu.c:    if ((menu->button = malloc(sizeof(menu_button_t))) == NULL)
+menu/fill_menu.c:    menu->wizards = fill_wizards(menu->wizards);
+menu/fill_menu.c:    menu->titles = fill_title(menu->titles);
+menu/fill_menu.c:    menu->button = fill_button(menu->button);
+menu/fill_menu.c:    menu->music = sfMusic_createFromFile("musics/menu.ogg");
+menu/fill_menu.c:    scene->menu_background = menu_animations(scene->menu_background);
+menu/fill_menu.c:    scene->menu_background->texture = sfTexture_createFromFile(\
+menu/fill_menu.c:    scene->menu_background->sprite = sfSprite_create();
+menu/fill_menu.c:    scene->menu_background->pos.x = 0;
+menu/fill_menu.c:    scene->menu_background->pos.y = -190;
+menu/fill_menu.c:    sfSprite_setPosition(scene->menu_background->sprite, \
+menu/fill_menu.c:    scene->menu_background->pos);
+menu/fill_menu.c:    sfSprite_setTexture(scene->menu_background->sprite, \
+menu/fill_menu.c:    scene->menu_background->texture, sfFalse);
+menu/fill_menu.c:    rules->texture = sfTexture_createFromFile(\
+menu/fill_menu.c:    rules->sprite = sfSprite_create();
+menu/fill_menu.c:    rules->pos.x = 0;
+menu/fill_menu.c:    rules->pos.y = -190;
+menu/fill_menu.c:    sfSprite_setPosition(rules->sprite, rules->pos);
+menu/fill_menu.c:    sfSprite_setTexture(rules->sprite, rules->texture, sfFalse);
+menu/fill_menu.c:    scene->type = INTRO;
+menu/fill_menu.c:    scene->prev = NULL;
+menu/fill_menu.c:    scene->setting = fill_settings(scene->setting);
+menu/fill_menu.c:    scene->intro = fill_intro(scene->intro);
+menu/fill_menu.c:    scene->rules = fill_rules(scene->rules);
+menu/fill_menu.c:    scene->next = NULL;
+menu/display.c:        menu->wizards->rect.left += 250;
+menu/display.c:    if (menu->wizards->rect.left >= 1980)
+menu/display.c:        menu->wizards->rect.left = 0;
+menu/display.c:    if (menu->wizards->pos.x >= 1900) {
+menu/display.c:        menu->wizards->pos.x = -90;
+menu/display.c:    menu->wizards->pos.x += v;
+menu/display.c:    sfMusic_setLoop(menu->music, sfTrue);
+menu/display.c:    sfSprite_setPosition(menu->wizards->sprite, menu->wizards->pos);
+menu/display.c:    sfSprite_setTextureRect(menu->wizards->sprite, menu->wizards->rect);
+menu/display.c:    sfSprite_setTexture(menu->wizards->sprite, menu->wizards->texture, \
+menu/display.c:    sfRenderWindow_drawSprite(window, menu->wizards->sprite, NULL);
+menu/display.c:    sfRenderWindow_drawSprite(window, (*scene)->rules->sprite, NULL);
+menu/display.c:            (*scene)->type = MENU;
+menu/display.c:        sfSprite_setPosition(button->sprite, button->pos);
+menu/display.c:        sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+menu/display.c:        sfRenderWindow_drawSprite(window, button->sprite, NULL);
+menu/display.c:        button = button->next;
+menu/display.c:    for (;button->prev != NULL; button = button->prev);
+menu/display.c:    for (;button->type != MENU_BUTTON_START; button = button->next);
+menu/display.c:    return (button->music);
+menu/display.c:    wizard_t *wizard = (*scene)->menu_background->wizards;
+menu/display.c:    title_t *title = (*scene)->menu_background->titles;
+menu/display.c:    for (;wizard->prev != NULL; wizard = wizard->prev);
+menu/display.c:    sfRenderWindow_drawSprite(window, (*scene)->menu_background->sprite, NULL);
+menu/display.c:    display_wizards(window, (*scene)->menu_background, clock, 5);
+menu/display.c:    sfRenderWindow_drawText(window, title->text, NULL);
+menu/display.c:    sfRenderWindow_drawText(window, title->next->text, NULL);
+menu/display.c:    place_button(window, (*scene)->menu_background->button);
+menu/display.c:    if ((*scene)->menu_background->button->blow == 2 || \
+menu/display.c:        (*scene)->menu_background->button->blow == 1) {
+menu/display.c:        sfMusic_play(find_music_blow((*scene)->menu_background->button));
+menu/display.c:        change_play_button(window, (*scene)->menu_background->button, scene);
+menu/display.c:        (*scene)->menu_background->button->blow = 0;
+menu/display.c:        (*scene)->menu_background->button->pos = init_vec2f(800, 300);
+menu/display.c:        (*scene) = (*scene)->next;
+menu/wizards/initialize_wizards.c:    wizard->texture = sfTexture_createFromFile(str, NULL);
+menu/wizards/initialize_wizards.c:    wizard->pos.x = x;
+menu/wizards/initialize_wizards.c:    wizard->pos.y = y;
+menu/wizards/initialize_wizards.c:    wizard->rect.top = 0;
+menu/wizards/initialize_wizards.c:    wizard->rect.left = 0;
+menu/wizards/initialize_wizards.c:    wizard->rect.width = 225;
+menu/wizards/initialize_wizards.c:    wizard->rect.height = 250;
+menu/wizards/initialize_wizards.c:    wizard->sprite = sfSprite_create();
+menu/wizards/initialize_wizards.c:    wizards->prev = NULL;
+menu/wizards/initialize_wizards.c:    "sprites/menu/walk_little2.png", -40, 750);
+menu/wizards/initialize_wizards.c:    if ((wizards->next = malloc(sizeof(wizard_t))) == NULL)
+menu/wizards/initialize_wizards.c:    wizards->next->prev = wizards;
+menu/wizards/initialize_wizards.c:    wizards->next = fill_wizards_data(wizards->next, \
+menu/wizards/initialize_wizards.c:    "sprites/menu/walk_new.png", -140, 750);
+menu/wizards/initialize_wizards.c:    wizards->next->next = NULL;
+menu/titles/title_data.c:    sfText_setString(title->text, str);
+menu/titles/title_data.c:    sfText_setFont(title->text, title->font);
+menu/titles/title_data.c:    sfText_setCharacterSize(title->text, x);
+menu/titles/title_data.c:    sfText_setPosition(title->text, title->pos);
+menu/titles/title_data.c:    title->font = sfFont_createFromFile(str);
+menu/titles/title_data.c:    title->text = sfText_create();
+menu/titles/title_data.c:        title->pos.x = 420;
+menu/titles/title_data.c:        title->pos.y = 800;
+menu/titles/title_data.c:        title->pos.x = 575;
+menu/titles/title_data.c:        title->pos.y = 90;
+menu/titles/title_data.c:    title->prev = NULL;
+menu/titles/title_data.c:    title->next = fill_title_data(title->next, "fonts/1.ttf");
+menu/titles/title_data.c:    title->next->prev = title;
+menu/titles/title_data.c:    title->next->next = NULL;
+game/display/sort_walk.c:    int tmp_x = game_object->pos.x;
+game/display/sort_walk.c:    int tmp_y = game_object->pos.y;
+game/display/sort_walk.c:    for (; game_object->next; game_object = game_object->next) {
+game/display/sort_walk.c:        if (game_object->pos.x + 40 > tmp_x && game_object->pos.y + 45 > tmp_y)
+game/display/sort_walk.c:    int tmp_y = game_object->pos.y;
+game/display/sort_walk.c:    for (; game_object; game_object = game_object->next) {
+game/display/sort_walk.c:        if (game_object->pos.y < tmp_y) {
+game/display/sort_walk.c:            tmp_y = game_object->pos.y;
+game/display/sort_walk.c:    tmp = first->prev;
+game/display/sort_walk.c:    first->prev = game_object->prev;
+game/display/sort_walk.c:    game_object->prev = tmp;
+game/display/sort_walk.c:    tmp = first->next;
+game/display/sort_walk.c:    first->next = game_object->next;
+game/display/sort_walk.c:    game_object->next = tmp;
+game/display/sort_walk.c:    if (first->prev)
+game/display/sort_walk.c:        first->prev->next = first;
+game/display/sort_walk.c:    if (first->next)
+game/display/sort_walk.c:        first->next->prev = first;
+game/display/sort_walk.c:    if (game_object->prev)
+game/display/sort_walk.c:        game_object->prev->next = game_object;
+game/display/sort_walk.c:    if (game_object->next)
+game/display/sort_walk.c:        game_object->next->prev = game_object;
+game/display/sort_walk.c:    game_object = game_object->next;
+game/display/sort_walk.c:    first->next = game_object->next;
+game/display/sort_walk.c:    game_object->prev = first->prev;
+game/display/sort_walk.c:    if (first->next)
+game/display/sort_walk.c:        first->next->prev = first;
+game/display/sort_walk.c:    if (game_object->prev)
+game/display/sort_walk.c:        game_object->prev->next = game_object;
+game/display/sort_walk.c:    game_object->next = first;
+game/display/sort_walk.c:    first->prev = game_object;
+game/display/sort_walk.c:    game_object = game_object->next;
+game/display/sort_walk.c:    while (game_object->next) {
+game/display/sort_walk.c:            game_object = game_object->next;
+game/display/sort_walk.c:        for (int a = 0; a < i; a++, game_object = game_object->next);
+game/display/sort_walk.c:    for (; game_object->prev; game_object = game_object->prev);
+game/display/display_texts.c:    if (money->display == true && i % (200 - (speed * 50)) == 0)
+game/display/display_texts.c:        money->nb++;
+game/display/display_texts.c:    money->str = my_strdup(nbr_to_str(money->nb));
+game/display/display_texts.c:    if (!(tmp = malloc(sizeof(char) * (my_strlen(money->str) + 4))))
+game/display/display_texts.c:    tmp = my_str_cat(tmp, money->str);
+game/display/display_texts.c:    sfText_setString(money->text, tmp);
+game/display/display_texts.c:    sfText_setColor(money->text, money->color);
+game/display/display_texts.c:    sfRenderWindow_drawText(window, money->text, NULL);
+game/display/display_texts.c:    free(money->str);
+game/display/display_texts.c:    char *tmp = malloc(sizeof(char) * (my_strlen(wave->str) + 5));
+game/display/display_texts.c:    tmp = my_str_cat(tmp, wave->str);
+game/display/display_texts.c:    tmp = my_str_cat(tmp, nbr_to_str(wave->nb));
+game/display/display_texts.c:    sfText_setString(wave->text, tmp);
+game/display/display_texts.c:    sfText_setColor(wave->text, wave->color);
+game/display/display_texts.c:    sfRenderWindow_drawText(window, wave->text, NULL);
+game/display/display_texts.c:    if (display_money(window, texts->money, speed) == FAILURE)
+game/display/display_texts.c:    if (display_wave(window, texts->wave) == FAILURE)
+game/display/move_game_object.c:    int tmp_x = game_object->pos.x + game_object->diff_for_direction;
+game/display/move_game_object.c:    int tmp_y = game_object->pos.y + game_object->diff_for_direction;
+game/display/move_game_object.c:    game_object->pos.x += game_object->speed_x;
+game/display/move_game_object.c:    game_object->pos.y += game_object->speed_y;
+game/display/move_game_object.c:    if (sfClock_getElapsedTime(game_object->clock).microseconds > \
+game/display/move_game_object.c:    game_object->time) {
+game/display/move_game_object.c:        game_object->rect.left += 104;
+game/display/move_game_object.c:        if (game_object->rect.left == 832)
+game/display/move_game_object.c:            game_object->rect.left = 0;
+game/display/move_game_object.c:        sfClock_restart(game_object->clock);
+game/display/display_scene_game.c:    if (i == -1)
+game/display/display_scene_game.c:    for (; emplacement->next; emplacement = emplacement->next);
+game/display/display_scene_game.c:        mult = -2;
+game/display/display_scene_game.c:    emplacement->color = init_color(255, 255, 255, i);
+game/display/display_scene_game.c:    sfSprite_setTexture(emplacement->sprite, emplacement->texture, sfFalse);
+game/display/display_scene_game.c:    sfSprite_setPosition(emplacement->sprite, emplacement->pos);
+game/display/display_scene_game.c:    sfSprite_setColor(emplacement->sprite, emplacement->color);
+game/display/display_scene_game.c:    sfRenderWindow_drawSprite(window, emplacement->sprite, NULL);
+game/display/display_scene_game.c:        i = -1;
+game/display/display_scene_game.c:    game_object_t *game_object = objs->game_object;
+game/display/display_scene_game.c:    display_background(window, objs->background);
+game/display/display_scene_game.c:    if (objs->tower_move)
+game/display/display_scene_game.c:    display_arrow(window, objs->emplacement);
+game/display/display_scene_game.c:    for (; game_object->prev; game_object = game_object->prev);
+game/display/display_scene_game.c:    for (; game_object; game_object = game_object->next) {
+game/display/display_scene_game.c:        if (game_object->tower == NO_TOWER)
+game/display/display_scene_game.c:    if (objs->rocket)
+game/display/display_scene_game.c:    if (objs->tower_move)
+game/display/display_scene_game.c:        display_tower_move(window, objs->tower_move);
+game/display/display_scene_game.c:    display_heart(window, objs->heart, objs->life);
+game/display/display_scene_game.c:    for (; button; button = button->next) {
+game/display/display_scene_game.c:        sfSprite_setPosition(button->sprite, button->pos);
+game/display/display_scene_game.c:        sfSprite_setTextureRect(button->sprite, button->rect);
+game/display/display_scene_game.c:        sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+game/display/display_scene_game.c:        sfRenderWindow_drawSprite(window, button->sprite, NULL);
+game/display/display_scene_game.c:    scene_object_t *scene_object = (*scene)->objs;
+game/display/display_scene_game.c:    display_scene_object(window, (*scene)->objs);
+game/display/display_scene_game.c:    display_button(window, (*scene)->button);
+game/display/display_scene_game.c:    (*scene)->texts->nb_enemies->nb = (*scene)->objs->nb_character;
+game/display/display_scene_game.c:    if (display_texts(window, (*scene)->texts, scene_object->speed) == FAILURE)
+game/display/display_scene_game.c:    if ((*scene)->objs->life == 0) {
+game/display/display_scene_game.c:        (*scene) = (*scene)->next;
+game/display/display_scene_game.c:    if ((*scene)->objs->nb_character == 0) {
+game/display/display_scene_game.c:        if (((*scene)->texts->wave->nb++) == 15 || (*scene)->objs->life == 0) {
+game/display/display_scene_game.c:            (*scene) = (*scene)->next;
+game/display/display_scene_game.c:        if (!((*scene)->objs = re_init_enemy(scene_object)))
+game/display/display_emplacement.c:    for (; game_object->prev; game_object = game_object->prev);
+game/display/display_emplacement.c:    for (; game_object; game_object = game_object->next) {
+game/display/display_emplacement.c:        if (game_object->tower != NO_TOWER)
+game/display/display_emplacement.c:    float e_x = emplacement->pos.x;
+game/display/display_emplacement.c:    float e_y = emplacement->pos.y;
+game/display/display_emplacement.c:    float t_x = tower_move->pos.x;
+game/display/display_emplacement.c:    float t_y = tower_move->pos.y;
+game/display/display_emplacement.c:    float t_s_y = tower_move->size.y;
+game/display/display_emplacement.c:    if (e_x < t_x && e_x + emplacement->size.x > t_x + 90) {
+game/display/display_emplacement.c:        if (e_y < t_y + 90 && e_y + emplacement->size.y > t_y + t_s_y)
+game/display/display_emplacement.c:    for (; emplacement; emplacement = emplacement->next) {
+game/display/display_emplacement.c:    tower_move_t *tower_move = scene_object->tower_move;
+game/display/display_emplacement.c:    game_object_t *game_object = scene_object->game_object;
+game/display/display_emplacement.c:    emplacement_t *emplacement = scene_object->emplacement;
+game/display/display_emplacement.c:    for (; emplacement->next; emplacement = emplacement->next) {
+game/display/display_emplacement.c:        sfRectangleShape_setFillColor(emplacement->rect, color);
+game/display/display_emplacement.c:        sfRenderWindow_drawRectangleShape(window, emplacement->rect, NULL);
+game/display/display_game_object.c:    sfVector2f pos = init_vec2f(tmp.x - 200, tmp.y - 200);
+game/display/display_game_object.c:    tower_move->pos = init_vec2f(tmp.x - tower_move->size.x / 2,
+game/display/display_game_object.c:    tmp.y - tower_move->size.y / 2);
+game/display/display_game_object.c:    sfCircleShape_setPosition(tower_move->circle, pos);
+game/display/display_game_object.c:    sfSprite_setPosition(tower_move->sprite, tower_move->pos);
+game/display/display_game_object.c:    sfSprite_setTextureRect(tower_move->sprite, tower_move->rect);
+game/display/display_game_object.c:    sfSprite_setTexture(tower_move->sprite, tower_move->texture, sfFalse);
+game/display/display_game_object.c:    sfRenderWindow_drawCircleShape(window, tower_move->circle, NULL);
+game/display/display_game_object.c:    sfRenderWindow_drawSprite(window, tower_move->sprite, NULL);
+game/display/display_game_object.c:    sfSprite_setPosition(background->sprite, background->pos);
+game/display/display_game_object.c:    sfSprite_setTexture(background->sprite, background->texture, sfFalse);
+game/display/display_game_object.c:    sfRenderWindow_drawSprite(window, background->sprite, NULL);
+game/display/display_game_object.c:    if (game_object->display == true)
+game/display/display_game_object.c:    game_object->pos_life = init_vec2f(game_object->pos.x + 47,
+game/display/display_game_object.c:    game_object->pos.y + 10);
+game/display/display_game_object.c:    sfText_setString(game_object->text, nbr_to_str(game_object->life));
+game/display/display_game_object.c:    sfText_setPosition(game_object->text, game_object->pos_life);
+game/display/display_game_object.c:    sfRenderWindow_drawText(window, game_object->text, NULL);
+game/display/display_game_object.c:    sfSprite_setPosition(game_object->sprite, game_object->pos);
+game/display/display_game_object.c:    sfSprite_setTextureRect(game_object->sprite, game_object->rect);
+game/display/display_game_object.c:    sfSprite_setTexture(game_object->sprite, game_object->texture, sfFalse);
+game/display/display_game_object.c:    sfRenderWindow_drawSprite(window, game_object->sprite, NULL);
+game/display/display_heart.c:    for (int i = 0; i < life; heart = heart->next, i++) {
+game/display/display_heart.c:        if (heart->display == false)
+game/display/display_heart.c:        sfSprite_setTextureRect(heart->sprite, heart->rect);
+game/display/display_heart.c:        sfSprite_setTexture(heart->sprite, heart->texture, sfFalse);
+game/display/display_heart.c:        sfSprite_setPosition(heart->sprite, heart->pos);
+game/display/display_heart.c:        sfRenderWindow_drawSprite(window, heart->sprite, NULL);
+game/display/change_direction_character.c:    walk->speed_x = speed_x;
+game/display/change_direction_character.c:    walk->speed_y = speed_y;
+game/display/change_direction_character.c:    walk->rect.top += rect;
+game/display/change_direction_character.c:    walk->direction++;
+game/display/change_direction_character.c:    if (tmp_x > 910 && walk->direction == FOURTH_DIAGONAL_RIGHT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, -104);
+game/display/change_direction_character.c:    if (tmp_x > 1480 && walk->direction == FOURTH_HORIZONTAL_RIGHT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, walk->speed_x / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x > 1483 && walk->direction == FIFTH_DIAGONAL_RIGHT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, 104);
+game/display/change_direction_character.c:    if (tmp_y > 565 && walk->direction == THIRD_VERTICAL_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, -walk->speed_y / 2, walk->speed_y / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x < 1480 && walk->direction == THIRD_DIAGONAL_LEFT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, 104);
+game/display/change_direction_character.c:    if (tmp_x < 1171 && walk->direction == THIRD_HORIZONTAL_LEFT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, walk->speed_x / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x < 1168 && walk->direction == THIRD_DIAGONAL_LEFT_UP)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, 104);
+game/display/change_direction_character.c:    if (tmp_y < 254 && walk->direction == THIRD_VERTICAL_UP)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_y / 2, walk->speed_y / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x < 1165 && walk->direction == FOURTH_DIAGONAL_LEFT_UP)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, -104);
+game/display/change_direction_character.c:    if (tmp_x < 910 && walk->direction == FOURTH_HORIZONTAL_LEFT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, -walk->speed_x / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x < 907 && walk->direction == FOURTH_DIAGONAL_LEFT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, -104);
+game/display/change_direction_character.c:    if (tmp_y > 822 && walk->direction == FOURTH_VERTICAL_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_y / 2, walk->speed_y / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x > 651 && walk->direction == FIRST_DIAGONAL_RIGHT_UP)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, -104);
+game/display/change_direction_character.c:    if (tmp_y < 450 && walk->direction == FIRST_VERTICAL_UP)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_y / 2, walk->speed_y / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x < 648 && walk->direction == FIRST_DIAGONAL_LEFT_UP)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, -104);
+game/display/change_direction_character.c:    if (tmp_x < 529 && walk->direction == SECOND_HORIZONTAL_LEFT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, walk->speed_x / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x < 526 && walk->direction == SECOND_DIAGONAL_LEFT_UP)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_x * 2, 104);
+game/display/change_direction_character.c:    if (tmp_y < 63 && walk->direction == SECOND_VERTICAL_UP)
+game/display/change_direction_character.c:        change_direction(walk, -walk->speed_y / 2, walk->speed_y / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x > 529 && walk->direction == SECOND_DIAGONAL_RIGHT_UP)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, -728);
+game/display/change_direction_character.c:    if (tmp_x > 1480 && walk->direction == THIRD_HORIZONTAL_RIGHT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, walk->speed_x / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x > 1483 && walk->direction == THIRD_DIAGONAL_RIGHT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_x * 2, 104);
+game/display/change_direction_character.c:    if (tmp_x > 266 && walk->direction == FIRST_HORIZONTAL_RIGHT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, walk->speed_x / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x > 269 && walk->direction == FIRST_DIAGONAL_RIGHT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, 104);
+game/display/change_direction_character.c:    if (tmp_y > 446 && walk->direction == FIRST_VERTICAL_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, -walk->speed_y / 2, walk->speed_y / 2, 104);
+game/display/change_direction_character.c:    if (tmp_x < 266 && walk->direction == FIRST_DIAGONAL_LEFT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x * 2, 0, 104);
+game/display/change_direction_character.c:    if (tmp_x < 80 && walk->direction == FIRST_HORIZONTAL_LEFT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, -walk->speed_x / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x < 77 && walk->direction == SECOND_DIAGONAL_LEFT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, 0, walk->speed_y * 2, -104);
+game/display/change_direction_character.c:    if (tmp_y > 760 && walk->direction == SECOND_VERTICAL_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_y / 2, walk->speed_y / 2, -104);
+game/display/change_direction_character.c:    if (tmp_x > 80 && walk->direction == SECOND_DIAGONAL_RIGHT_DOWN)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_y * 2, 0, -104);
+game/display/change_direction_character.c:    if (tmp_x > 648 && walk->direction == SECOND_HORIZONTAL_RIGHT)
+game/display/change_direction_character.c:        change_direction(walk, walk->speed_x / 2, -walk->speed_x / 2, 728);
+game/display/trajectory_shoot.c:    float sp = rocket->speed;
+game/display/trajectory_shoot.c:    if (rocket->malloc == true)
+game/display/trajectory_shoot.c:        rocket->end = init_vec2f(rocket->enemy->pos.x + 52,
+game/display/trajectory_shoot.c:        rocket->enemy->pos.y + 40);
+game/display/trajectory_shoot.c:    rocket->a = (rocket->end.y - rocket->start.y) / \
+game/display/trajectory_shoot.c:    (rocket->end.x - rocket->start.x);
+game/display/trajectory_shoot.c:    if (rocket->end.x < rocket->start.x + 40 && \
+game/display/trajectory_shoot.c:        rocket->end.x > rocket->start.x - 40 && rocket->end.y > \
+game/display/trajectory_shoot.c:        rocket->start.y - 40 && rocket->end.y < rocket->start.y + 40)
+game/display/trajectory_shoot.c:    rocket->b = (rocket->start.y) - (rocket->a * rocket->start.x);
+game/display/trajectory_shoot.c:    if (ABS((rocket->a)) < 1) {
+game/display/trajectory_shoot.c:        rocket->pos.x += (rocket->start.x > rocket->end.x) ? -sp : sp;
+game/display/trajectory_shoot.c:        rocket->pos.y = rocket->a * rocket->pos.x + rocket->b;
+game/display/trajectory_shoot.c:        rocket->pos.y += (rocket->start.y > rocket->end.y) ? -sp : sp;
+game/display/trajectory_shoot.c:        rocket->pos.x = (rocket->pos.y - rocket->b) / rocket->a;
+game/display/trajectory_shoot.c:    if (rocket->malloc == false) {
+game/display/trajectory_shoot.c:        rocket->display = false;
+game/display/trajectory_shoot.c:    rocket->enemy->life -= rocket->damage;
+game/display/trajectory_shoot.c:    rocket->display = false;
+game/display/trajectory_shoot.c:    rocket->malloc = false;
+game/display/trajectory_shoot.c:    if (rocket->pause == false)
+game/display/trajectory_shoot.c:    if (rocket->start.x > rocket->end.x) {
+game/display/trajectory_shoot.c:        if (rocket->pos.x < rocket->end.x)
+game/display/trajectory_shoot.c:        if (rocket->pos.x > rocket->end.x)
+game/display/trajectory_shoot.c:    if (rocket->start.y < rocket->end.y && rocket->pos.y > rocket->end.y)
+game/display/trajectory_shoot.c:    sfSprite_setTexture(rocket->sprite, rocket->texture, sfFalse);
+game/display/trajectory_shoot.c:    sfSprite_setPosition(rocket->sprite, rocket->pos);
+game/display/trajectory_shoot.c:    sfRenderWindow_drawSprite(window, rocket->sprite, NULL);
+game/display/display_game_sett.c:    sfSprite_setTexture(bg->sprite, bg->texture, sfFalse);
+game/display/display_game_sett.c:    sfSprite_setPosition(bg->sprite, bg->pos);
+game/display/display_game_sett.c:    sfRenderWindow_drawSprite(window, bg->sprite, NULL);
+game/display/display_game_sett.c:    sfSprite_setTexture(go->sprite, go->texture, sfFalse);
+game/display/display_game_sett.c:    sfSprite_setPosition(go->sprite, go->pos);
+game/display/display_game_sett.c:    sfRenderWindow_drawSprite(window, go->sprite, NULL);
+game/display/display_game_sett.c:    for (; button->prev; button = button->prev);
+game/display/display_game_sett.c:    for (; button; button = button->next) {
+game/display/display_game_sett.c:        sfSprite_setTexture(button->sprite, button->texture, sfFalse);
+game/display/display_game_sett.c:        sfSprite_setTextureRect(button->sprite, button->rect);
+game/display/display_game_sett.c:        sfSprite_setPosition(button->sprite, button->pos);
+game/display/display_game_sett.c:        sfRenderWindow_drawSprite(window, button->sprite, NULL);
+game/display/display_game_sett.c:    display_background_gs(window, (*scene)->objs->background);
+game/display/display_game_sett.c:    display_go_sett(window, (*scene)->objs->game_object);
+game/display/display_game_sett.c:    display_button_sett(window, (*scene)->button);
+game/display/display_rocket.c:    sfVector2f pos_enemy = init_vec2f(game_object->pos.x, game_object->pos.y);
+game/display/display_rocket.c:    sfVector2f pos_tower = rocket->tower->pos;
+game/display/display_rocket.c:    if (pos_tower.x - 150 < pos_enemy.x && pos_tower.y + 230 > pos_enemy.y \
+game/display/display_rocket.c:        && pos_tower.x + 150 > pos_enemy.x && pos_tower.y - 100 < pos_enemy.y \
+game/display/display_rocket.c:    rocket->a = (rocket->end.y - rocket->start.y) / \
+game/display/display_rocket.c:    (rocket->end.x - rocket->start.x);
+game/display/display_rocket.c:    rocket->b = (rocket->start.y) - (rocket->a * rocket->start.x);
+game/display/display_rocket.c:    rocket->pos = rocket->start;
+game/display/display_rocket.c:    for (; game_object->prev; game_object = game_object->prev);
+game/display/display_rocket.c:    for (; game_object; game_object = game_object->next) {
+game/display/display_rocket.c:        if (game_object->tower == NO_TOWER)
+game/display/display_rocket.c:            rocket->enemy = game_object;
+game/display/display_rocket.c:            rocket->end = init_vec2f(game_object->pos.x + 52,
+game/display/display_rocket.c:            game_object->pos.y + 40);
+game/display/display_rocket.c:            rocket->display = true;
+game/display/display_rocket.c:            rocket->malloc = true;
+game/display/display_rocket.c:    for (; rocket->prev; rocket = rocket->prev);
+game/display/display_rocket.c:    for (; rocket; rocket = rocket->next) {
+game/display/display_rocket.c:        if (rocket->display == false)
+game/display/display_rocket.c:            rocket->malloc = false;
+game/display/display_rocket.c:        if (rocket->malloc == false)
+game/display/display_rocket.c:        if (rocket->enemy->life <= 0 || (rocket->enemy->pos.x > 1350 && \
+game/display/display_rocket.c:            rocket->enemy->pos.y > 740))
+game/display/display_rocket.c:            rocket->malloc = false;
+game/display/display_rocket.c:    game_object_t *game_object = scene_object->game_object;
+game/display/display_rocket.c:    rocket_t *rocket = scene_object->rocket;
+game/display/display_rocket.c:    for (; rocket; rocket = rocket->next) {
+game/display/display_rocket.c:        if (rocket->display == true) {
+game/display/display_rocket.c:            change_rocket(scene_object->rocket);
+game/display/display_rocket.c:            game_object = scene_object->game_object;
+game/display/display_rocket.c:        } else if (rocket->display == false && scene_object->pause == false)
+game/display/display_towers.c:    sfSprite_setPosition(game_object->sprite, game_object->pos);
+game/display/display_towers.c:    sfSprite_setTextureRect(game_object->sprite, game_object->rect);
+game/display/display_towers.c:    sfSprite_setTexture(game_object->sprite, game_object->texture, sfFalse);
+game/display/display_towers.c:    sfRenderWindow_drawSprite(window, game_object->sprite, NULL);
+game/init/init_game_object.c:    if (!(background->texture = \
+game/init/init_game_object.c:    background->sprite = sfSprite_create();
+game/init/init_game_object.c:    background->pos = init_vec2f(0, 0);
+game/init/init_game_object.c:    if (!(game_object->font = sfFont_createFromFile("fonts/font.ttf")))
+game/init/init_game_object.c:    game_object->text = sfText_create();
+game/init/init_game_object.c:    if (game_object->character == CHARACTER_3)
+game/init/init_game_object.c:        game_object->life = 1200;
+game/init/init_game_object.c:    else if (game_object->character == CHARACTER_2)
+game/init/init_game_object.c:        game_object->life = 500;
+game/init/init_game_object.c:    else if (game_object->character == CHARACTER_1)
+game/init/init_game_object.c:        game_object->life = 170;
+game/init/init_game_object.c:    game_object->color = sfRed;
+game/init/init_game_object.c:    sfText_setFont(game_object->text, game_object->font);
+game/init/init_game_object.c:    sfText_setColor(game_object->text, game_object->color);
+game/init/init_game_object.c:    sfText_setCharacterSize(game_object->text, 15);
+game/init/init_game_object.c:    game_object->speed_y = 0;
+game/init/init_game_object.c:    game_object->display = true;
+game/init/init_game_object.c:    game_object->clock = sfClock_create();
+game/init/init_game_object.c:    game_object->tower = NO_TOWER;
+game/init/init_game_object.c:    if (!(game_object->texture = \
+game/init/init_game_object.c:    int pos = -(rand() % (nb * 66)) - 204;
+game/init/init_game_object.c:    game_object->diff_for_direction = (tmp > 26) ? tmp - 26 : -tmp + 10;
+game/init/init_game_object.c:    game_object->sprite = sfSprite_create();
+game/init/init_game_object.c:    game_object->pos = init_vec2f(pos, 100 + tmp);
+game/init/init_game_object.c:    game_object->size = init_vec2f(104, 104);
+game/init/init_game_object.c:    if ((a++) == nb - 1) {
+game/init/init_game_object.c:    game_object->prev = NULL;
+game/init/init_game_object.c:        game_object->pos_in_list = i;
+game/init/init_game_object.c:            game_object->character = CHARACTER_3;
+game/init/init_game_object.c:            game_object->character = CHARACTER_2;
+game/init/init_game_object.c:            game_object->character = CHARACTER_1;
+game/init/init_game_object.c:        if (!(game_object->next = malloc(sizeof(game_object_t))))
+game/init/init_game_object.c:        game_object->next->prev = game_object;
+game/init/init_game_object.c:        game_object = game_object->next;
+game/init/init_texts.c:    money->display = true;
+game/init/init_texts.c:    money->nb = 10;
+game/init/init_texts.c:    if (!(money->font = sfFont_createFromFile("fonts/k.otf")))
+game/init/init_texts.c:    if (!(money->text = sfText_create()))
+game/init/init_texts.c:    money->pos = init_vec2f(1750, 520);
+game/init/init_texts.c:    money->color = init_color(255, 200, 100, 255);
+game/init/init_texts.c:    sfText_setFont(money->text, money->font);
+game/init/init_texts.c:    sfText_setCharacterSize(money->text, 65);
+game/init/init_texts.c:    sfText_setPosition(money->text, money->pos);
+game/init/init_texts.c:    wave->nb = 1;
+game/init/init_texts.c:    if (!(wave->str = my_strdup("Wave ")))
+game/init/init_texts.c:    if (!(wave->font = sfFont_createFromFile("fonts/AlphaRope.ttf")))
+game/init/init_texts.c:    if (!(wave->text = sfText_create()))
+game/init/init_texts.c:    wave->pos = init_vec2f(1680, 220);
+game/init/init_texts.c:    wave->color = init_color(255, 255, 255, 255);
+game/init/init_texts.c:    sfText_setFont(wave->text, wave->font);
+game/init/init_texts.c:    sfText_setCharacterSize(wave->text, 45);
+game/init/init_texts.c:    sfText_setPosition(wave->text, wave->pos);
+game/init/init_texts.c:    nb_enemies->nb = 3;
+game/init/init_texts.c:    if (!(texts->money = init_money()))
+game/init/init_texts.c:    if (!(texts->wave = init_wave()))
+game/init/init_texts.c:    if (!(texts->nb_enemies = init_nb_enemies()))
+game/init/init_button_tower.c:    if (button->type == BUTTON_TOWER_THREE) {
+game/init/init_button_tower.c:        if (!(button->texture = \
+game/init/init_button_tower.c:        button->pos = init_vec2f(1665, 600);
+game/init/init_button_tower.c:        button->size = init_vec2f(154, 148);
+game/init/init_button_tower.c:        button->rect = init_intrect(0, 0, 154, 148);
+game/init/init_button_tower.c:    if (button->type == BUTTON_TOWER_FOUR) {
+game/init/init_button_tower.c:        if (!(button->texture = \
+game/init/init_button_tower.c:        button->pos = init_vec2f(1795, 600);
+game/init/init_button_tower.c:        button->size = init_vec2f(123, 148);
+game/init/init_button_tower.c:        button->rect = init_intrect(0, 0, 123, 148);
+game/init/init_button_tower.c:    if (button->type == BUTTON_TOWER_ONE) {
+game/init/init_button_tower.c:        if (!(button->texture = \
+game/init/init_button_tower.c:        button->pos = init_vec2f(1665, 310);
+game/init/init_button_tower.c:        button->size = init_vec2f(122, 148);
+game/init/init_button_tower.c:        button->rect = init_intrect(0, 0, 122, 148);
+game/init/init_button_tower.c:    if (button->type == BUTTON_TOWER_TWO) {
+game/init/init_button_tower.c:        if (!(button->texture = \
+game/init/init_button_tower.c:        button->pos = init_vec2f(1795, 310);
+game/init/init_button_tower.c:        button->size = init_vec2f(120, 148);
+game/init/init_button_tower.c:        button->rect = init_intrect(0, 0, 120, 148);
+game/init/init_button_tower.c:    button->type = i;
+game/init/init_button_tower.c:    button->activate = false;
+game/init/init_button_tower.c:    button->sprite = sfSprite_create();
+game/init/init_button_tower.c:    button->callback = &button_tower_press;
+game/init/init_button_tower.c:    if (!(button->next = malloc(sizeof(button_t))))
+game/init/init_button_tower.c:    button->next->prev = button;
+game/init/init_button_tower.c:    button = button->next;
+game/init/init_button_tower.c:        if (!(button->next = malloc(sizeof(button_t))))
+game/init/init_button_tower.c:        button->next->prev = button;
+game/init/init_button_tower.c:        button = button->next;
+game/init/init_button_tower.c:    button->next = NULL;
+game/init/re_init_scene_object.c:        game_object->speed_x += 0.6;
+game/init/re_init_scene_object.c:        game_object->speed_x += 1.2;
+game/init/re_init_scene_object.c:    game_object->pos_in_list = i;
+game/init/re_init_scene_object.c:        game_object->character = CHARACTER_3;
+game/init/re_init_scene_object.c:        game_object->character = CHARACTER_2;
+game/init/re_init_scene_object.c:        game_object->character = CHARACTER_1;
+game/init/re_init_scene_object.c:    for (; game_object->next; game_object = game_object->next);
+game/init/re_init_scene_object.c:    if (!(game_object->next = malloc(sizeof(game_object_t))))
+game/init/re_init_scene_object.c:    game_object->next->prev = game_object;
+game/init/re_init_scene_object.c:    game_object = game_object->next;
+game/init/re_init_scene_object.c:        if (i == nb - 1)
+game/init/re_init_scene_object.c:        if (!(game_object->next = malloc(sizeof(game_object_t))))
+game/init/re_init_scene_object.c:        game_object->next->prev = game_object;
+game/init/re_init_scene_object.c:        game_object = game_object->next;
+game/init/re_init_scene_object.c:    game_object->next = NULL;
+game/init/re_init_scene_object.c:    for (; game_object->prev; game_object = game_object->prev);
+game/init/re_init_scene_object.c:    float i = scene_object->speed;
+game/init/re_init_scene_object.c:    scene_object->nb_malloc += 3;
+game/init/re_init_scene_object.c:    scene_object->nb_character = scene_object->nb_malloc;
+game/init/re_init_scene_object.c:    if (!(scene_object->game_object = \
+game/init/re_init_scene_object.c:        re_init(scene_object->game_object, scene_object->nb_malloc, i)))
+game/init/init_music.c:    if (!(music->music_money = sfMusic_createFromFile("musics/money.ogg")))
+game/init/init_game_sett.c:    if (!(bg->texture = \
+game/init/init_game_sett.c:    if (!(bg->sprite = sfSprite_create()))
+game/init/init_game_sett.c:    bg->pos = init_vec2f(0, 0);
+game/init/init_game_sett.c:    go->next = NULL;
+game/init/init_game_sett.c:    go->prev = NULL;
+game/init/init_game_sett.c:    if (!(go->texture = \
+game/init/init_game_sett.c:    if (!(go->sprite = sfSprite_create()))
+game/init/init_game_sett.c:    go->pos = init_vec2f(500, 300);
+game/init/init_game_sett.c:    if (!(sc->background = init_bg_sett()))
+game/init/init_game_sett.c:    if (!(sc->game_object = init_go_sett()))
+game/init/init_game_sett.c:    if (!(scene->next = malloc(sizeof(scene_t))))
+game/init/init_game_sett.c:    scene->next->prev = scene;
+game/init/init_game_sett.c:    scene = scene->next;
+game/init/init_game_sett.c:    scene->type = SETT;
+game/init/init_game_sett.c:    scene->button = init_button_game_sett();
+game/init/init_game_sett.c:    scene->objs = init_background_sett();
+game/init/init_button_game.c:    button->type = BUTTON_MENU;
+game/init/init_button_game.c:    if (!(button->texture = \
+game/init/init_button_game.c:    button->activate = false;
+game/init/init_button_game.c:    button->sprite = sfSprite_create();
+game/init/init_button_game.c:    button->pos = init_vec2f(1820, 100);
+game/init/init_button_game.c:    button->size = init_vec2f(85, 85);
+game/init/init_button_game.c:    button->rect = init_intrect(0, 0, 85, 85);
+game/init/init_button_game.c:    button->callback = &next_scene;
+game/init/init_button_game.c:    button->type = BUTTON_PLAY_PAUSE;
+game/init/init_button_game.c:    if (!(button->texture = \
+game/init/init_button_game.c:    button->activate = false;
+game/init/init_button_game.c:    button->sprite = sfSprite_create();
+game/init/init_button_game.c:    button->pos = init_vec2f(1720, 100);
+game/init/init_button_game.c:    button->size = init_vec2f(85, 85);
+game/init/init_button_game.c:    button->rect = init_intrect(93, 0, 77, 85);
+game/init/init_button_game.c:    button->callback = &change_button_play;
+game/init/init_scene_game.c:    objs->nb_character = 3;
+game/init/init_scene_game.c:    objs->nb_malloc = 3;
+game/init/init_scene_game.c:    objs->tower_move = NULL;
+game/init/init_scene_game.c:    objs->rocket = NULL;
+game/init/init_scene_game.c:    objs->pause = false;
+game/init/init_scene_game.c:    objs->speed = 1;
+game/init/init_scene_game.c:    objs->life = 3;
+game/init/init_scene_game.c:    if (!(objs->background = malloc(sizeof(background_t))))
+game/init/init_scene_game.c:    if (!(objs->background = init_background(objs->background)))
+game/init/init_scene_game.c:    if (!(objs->game_object = malloc(sizeof(game_object_t))))
+game/init/init_scene_game.c:    if (!(objs->game_object = init_game_object(objs->game_object)))
+game/init/init_scene_game.c:    if (!(objs->emplacement = malloc(sizeof(emplacement_t))))
+game/init/init_scene_game.c:    if (!(objs->emplacement = init_emplacement(objs->emplacement)))
+game/init/init_scene_game.c:    if (!(objs->heart = init_heart()))
+game/init/init_scene_game.c:    button->prev = NULL;
+game/init/init_scene_game.c:    if (!(button->next = malloc(sizeof(button_t))))
+game/init/init_scene_game.c:    button->next->prev = button;
+game/init/init_scene_game.c:    button = button->next;
+game/init/init_scene_game.c:    for (; button->prev; button = button->prev);
+game/init/init_scene_game.c:    scene->type = GAME;
+game/init/init_scene_game.c:    if (!(scene->objs = malloc(sizeof(scene_object_t))))
+game/init/init_scene_game.c:    if (!(scene->objs = init_scene_object(scene->objs)))
+game/init/init_scene_game.c:    if (!(scene->button = malloc(sizeof(button_t))))
+game/init/init_scene_game.c:    if (!(scene->button = init_button(scene->button)))
+game/init/init_scene_game.c:    if (!(scene->texts = malloc(sizeof(text_t))))
+game/init/init_scene_game.c:    if (!(scene->texts = init_texts(scene->texts)))
+game/init/init_scene_game.c:    if (!(scene->music = init_music(scene->music)))
+game/init/init_heart.c:    heart->display = true;
+game/init/init_heart.c:    heart->rect = init_intrect(0, 0, 87, 75);
+game/init/init_heart.c:    heart->size = init_vec2f(87, 75);
+game/init/init_heart.c:        heart->pos = init_vec2f(30, 40);
+game/init/init_heart.c:        heart->pos = init_vec2f(130, 40);
+game/init/init_heart.c:        heart->pos = init_vec2f(230, 40);
+game/init/init_heart.c:    heart->next = NULL;
+game/init/init_heart.c:    for (; heart->prev; heart = heart->prev);
+game/init/init_heart.c:    heart->prev = NULL;
+game/init/init_heart.c:        if (!(heart->texture = \
+game/init/init_heart.c:        heart->sprite = sfSprite_create();
+game/init/init_heart.c:        if (!(heart->next = malloc(sizeof(heart_t))))
+game/init/init_heart.c:        heart->next->prev = heart;
+game/init/init_heart.c:        heart = heart->next;
+game/init/init_button_game_sett.c:        button->rect = init_intrect(0, 0, 320, 213);
+game/init/init_button_game_sett.c:        button->pos = init_vec2f(530, 520);
+game/init/init_button_game_sett.c:        button->callback = &return_to_the_menu;
+game/init/init_button_game_sett.c:        button->rect = init_intrect(320, 0, 320, 213);
+game/init/init_button_game_sett.c:        button->pos = init_vec2f(1040, 520);
+game/init/init_button_game_sett.c:        button->callback = &retry_game_sett;
+game/init/init_button_game_sett.c:        button->rect = init_intrect(640, 0, 320, 213);
+game/init/init_button_game_sett.c:        button->pos = init_vec2f(770, 300);
+game/init/init_button_game_sett.c:        button->callback = &return_the_game;
+game/init/init_button_game_sett.c:        button->rect = init_intrect(0, 0, 60, 60);
+game/init/init_button_game_sett.c:        button->pos = init_vec2f(1300, 350);
+game/init/init_button_game_sett.c:        if (!(button->texture = \
+game/init/init_button_game_sett.c:        button->size = init_vec2f(320, 213);
+game/init/init_button_game_sett.c:        if (!(button->texture = \
+game/init/init_button_game_sett.c:        button->size = init_vec2f(60, 60);
+game/init/init_button_game_sett.c:    button->prev = NULL;
+game/init/init_button_game_sett.c:        if (!(button->sprite = sfSprite_create()))
+game/init/init_button_game_sett.c:        if (!(button->texture = \
+game/init/init_button_game_sett.c:        if (!(button->next = malloc(sizeof(button_t))))
+game/init/init_button_game_sett.c:        button->next->prev = button;
+game/init/init_button_game_sett.c:        button = button->next;
+game/init/init_button_game_sett.c:    button->next = NULL;
+game/init/init_button_game_sett.c:    for (; button->prev; button = button->prev);
+game/init/init_rocket.c:    if (game_object->tower == TOWER_FOUR) {
+game/init/init_rocket.c:        if (!(rocket->texture = \
+game/init/init_rocket.c:        rocket->damage = 35;
+game/init/init_rocket.c:    if (game_object->tower == TOWER_ONE) {
+game/init/init_rocket.c:        if (!(rocket->texture = \
+game/init/init_rocket.c:        rocket->damage = 10;
+game/init/init_rocket.c:    if (game_object->tower == TOWER_TWO) {
+game/init/init_rocket.c:        if (!(rocket->texture = \
+game/init/init_rocket.c:        rocket->damage = 15;
+game/init/init_rocket.c:    if (game_object->tower == TOWER_THREE) {
+game/init/init_rocket.c:        if (!(rocket->texture = \
+game/init/init_rocket.c:        rocket->damage = 25;
+game/init/init_rocket.c:    for (; game_object->next; game_object = game_object->next);
+game/init/init_rocket.c:    rocket->prev = NULL;
+game/init/init_rocket.c:    rocket->next = NULL;
+game/init/init_rocket.c:    rocket->display = false;
+game/init/init_rocket.c:    rocket->malloc = false;
+game/init/init_rocket.c:    rocket->pause = pause;
+game/init/init_rocket.c:    rocket->speed = 3 * i;
+game/init/init_rocket.c:    rocket->sprite = sfSprite_create();
+game/init/init_rocket.c:    rocket->enemy = NULL;
+game/init/init_rocket.c:    for (; game_object->next; game_object = game_object->next);
+game/init/init_rocket.c:    rocket->tower = game_object;
+game/init/init_rocket.c:    rocket->start = init_vec2f(game_object->pos.x + 54, game_object->pos.y);
+game/init/init_rocket.c:    for (; rocket->next; rocket = rocket->next);
+game/init/init_rocket.c:    for (; game_object->next; game_object = game_object->next);
+game/init/init_rocket.c:    if (!(rocket->next = malloc(sizeof(rocket_t))))
+game/init/init_rocket.c:    rocket->next->prev = rocket;
+game/init/init_rocket.c:    rocket = rocket->next;
+game/init/init_rocket.c:    rocket->next = NULL;
+game/init/init_rocket.c:    rocket->display = false;
+game/init/init_rocket.c:    rocket->pause = pause;
+game/init/init_rocket.c:    rocket->malloc = false;
+game/init/init_rocket.c:    rocket->speed = i * 3;
+game/init/init_rocket.c:    rocket->sprite = sfSprite_create();
+game/init/init_rocket.c:    rocket->start = init_vec2f(game_object->pos.x + 54, game_object->pos.y);
+game/init/init_rocket.c:    rocket->enemy = NULL;
+game/init/init_rocket.c:    rocket->tower = game_object;
+game/init/init_rocket.c:    for (; rocket->prev; rocket = rocket->prev);
+game/init/init_rocket.c:    float i = scene->objs->speed;
+game/init/init_rocket.c:    bool pause = scene->objs->pause;
+game/init/init_rocket.c:    rocket_t *rocket = scene->objs->rocket;
+game/init/init_rocket.c:    game_object_t *game_object = scene->objs->game_object;
+game/init/init_rocket.c:    scene->objs->rocket = rocket;
+game/init/init_button_fungus.c:    if (!(button->next = malloc(sizeof(button_t))))
+game/init/init_button_fungus.c:    button->next->prev = button;
+game/init/init_button_fungus.c:    button = button->next;
+game/init/init_button_fungus.c:    button->type = BUTTON_FUNGUS;
+game/init/init_button_fungus.c:    button->activate = false;
+game/init/init_button_fungus.c:    if (!(button->texture = \
+game/init/init_button_fungus.c:    button->sprite = sfSprite_create();
+game/init/init_button_fungus.c:    button->pos = init_vec2f(1750, 900);
+game/init/init_button_fungus.c:    button->size = init_vec2f(75, 75);
+game/init/init_button_fungus.c:    button->rect = init_intrect(0, 0, 75, 75);
+game/init/init_button_fungus.c:    button->callback = &change_speed;
+game/init/init_button_fungus.c:    button->next = NULL;
+game/init/init_emplacement.c:    if (!(emplacement->next = malloc(sizeof(emplacement_t))))
+game/init/init_emplacement.c:    emplacement->next->prev = emplacement;
+game/init/init_emplacement.c:    emplacement = emplacement->next;
+game/init/init_emplacement.c:    if (!(emplacement->texture = \
+game/init/init_emplacement.c:    if (!(emplacement->sprite = sfSprite_create()))
+game/init/init_emplacement.c:    emplacement->pos = init_vec2f(0, 140);
+game/init/init_emplacement.c:    emplacement->color = init_color(0, 0, 0, 255);
+game/init/init_emplacement.c:    emplacement->next = NULL;
+game/init/init_emplacement.c:    for (; emplacement->prev; emplacement = emplacement->prev);
+game/init/init_emplacement.c:    emplacement->prev = NULL;
+game/init/init_emplacement.c:        emplacement->color = init_color(100, 100, 0, 100);
+game/init/init_emplacement.c:        if (!(emplacement->rect = sfRectangleShape_create()))
+game/init/init_emplacement.c:        emplacement->pos = init_pos_rect(i);
+game/init/init_emplacement.c:        emplacement->size = init_size_rect(i);
+game/init/init_emplacement.c:        sfRectangleShape_setPosition(emplacement->rect, emplacement->pos);
+game/init/init_emplacement.c:        sfRectangleShape_setSize(emplacement->rect, emplacement->size);
+game/init/init_emplacement.c:        sfRectangleShape_setFillColor(emplacement->rect, emplacement->color);
+game/init/init_emplacement.c:        if (!(emplacement->next = malloc(sizeof(emplacement_t))))
+game/init/init_emplacement.c:        emplacement->next->prev = emplacement;
+game/init/init_emplacement.c:        emplacement = emplacement->next;
+game/init/init_game_object_trash.c:    game_object->direction = FIRST_HORIZONTAL_RIGHT;
+game/init/init_game_object_trash.c:    if (game_object->character == CHARACTER_3) {
+game/init/init_game_object_trash.c:        game_object->speed_x = 1.3;
+game/init/init_game_object_trash.c:        game_object->time = 90000;
+game/init/init_game_object_trash.c:    else if (game_object->character == CHARACTER_2) {
+game/init/init_game_object_trash.c:        game_object->speed_x = 1;
+game/init/init_game_object_trash.c:        game_object->time = 95000;
+game/init/init_game_object_trash.c:    else if (game_object->character == CHARACTER_1) {
+game/init/init_game_object_trash.c:        game_object->speed_x = 0.7;
+game/init/init_game_object_trash.c:        game_object->time = 100000;
+game/init/init_game_object_trash.c:    if (game_object->character == CHARACTER_1)
+game/init/init_game_object_trash.c:        game_object->rect = init_intrect(0, 0, 104, 104);
+game/init/init_game_object_trash.c:    else if (game_object->character == CHARACTER_2)
+game/init/init_game_object_trash.c:        game_object->rect = init_intrect(0, 832, 104, 104);
+game/init/init_game_object_trash.c:        game_object->rect = init_intrect(0, 1664, 104, 104);
+game/init/init_game_object_trash.c:    game_object->next = NULL;
+game/init/init_game_object_trash.c:    for (; game_object->prev; game_object = game_object->prev);
+game/destroy/destroy_an_enemy.c:    if (enemy->next && !(enemy->prev)) {
+game/destroy/destroy_an_enemy.c:        enemy = enemy->next;
+game/destroy/destroy_an_enemy.c:        free(enemy->prev);
+game/destroy/destroy_an_enemy.c:        enemy->prev = NULL;
+game/destroy/destroy_an_enemy.c:    } else if (enemy->prev && !(enemy->next)) {
+game/destroy/destroy_an_enemy.c:        enemy = enemy->prev;
+game/destroy/destroy_an_enemy.c:        free(enemy->next);
+game/destroy/destroy_an_enemy.c:        enemy->next = NULL;
+game/destroy/destroy_an_enemy.c:        for (; enemy->prev; enemy = enemy->prev);
+game/destroy/destroy_an_enemy.c:    enemy->next->prev = enemy->prev;
+game/destroy/destroy_an_enemy.c:    enemy->prev->next = enemy->next;
+game/destroy/destroy_an_enemy.c:    for (; enemy->prev; enemy = enemy->prev);
+game/destroy/destroy_an_enemy.c:    obj->game_object = NULL;
+game/destroy/destroy_an_enemy.c:    sfClock_destroy(enemy->clock);
+game/destroy/destroy_an_enemy.c:    sfTexture_destroy(enemy->texture);
+game/destroy/destroy_an_enemy.c:    sfSprite_destroy(enemy->sprite);
+game/destroy/destroy_an_enemy.c:    sfText_destroy(enemy->text);
+game/destroy/destroy_an_enemy.c:    sfFont_destroy(enemy->font);
+game/destroy/destroy_an_enemy.c:    game_object_t *enemy = scene_object->game_object;
+game/destroy/destroy_an_enemy.c:    game_object_t *tmp = scene_object->game_object;
+game/destroy/destroy_an_enemy.c:    for (; enemy->prev; enemy = enemy->prev);
+game/destroy/destroy_an_enemy.c:    for (; enemy; enemy = enemy->next) {
+game/destroy/destroy_an_enemy.c:        if (enemy->tower == NO_TOWER && (enemy->life <= 0 || \
+game/destroy/destroy_an_enemy.c:            (enemy->pos.x > 1350 && enemy->pos.y > 740)))
+game/destroy/destroy_an_enemy.c:        scene_object->game_object = tmp;
+game/destroy/destroy_an_enemy.c:    if (enemy->pos.x > 1350 && enemy->pos.y > 740)
+game/destroy/destroy_an_enemy.c:        scene_object->life--;
+game/destroy/destroy_an_enemy.c:    scene_object->nb_character--;
+game/destroy/destroy_an_enemy.c:    if (!(enemy->prev) && !(enemy->next))
+game/destroy/destroy_an_enemy.c:    scene_object->game_object = delete_enemy(enemy);
+game/events/analyse_events.c:    sfMusic_setLoop((*scene)->prev->menu_background->music, sfTrue);
+game/events/button_tower_press.c:    if (button->type == BUTTON_TOWER_THREE) {
+game/events/button_tower_press.c:        if (!(tower->texture = \
+game/events/button_tower_press.c:        tower->type = TOWER_THREE;
+game/events/button_tower_press.c:        tower->price = 60;
+game/events/button_tower_press.c:    if (button->type == BUTTON_TOWER_FOUR) {
+game/events/button_tower_press.c:        if (!(tower->texture = \
+game/events/button_tower_press.c:        tower->type = TOWER_FOUR;
+game/events/button_tower_press.c:        tower->price = 100;
+game/events/button_tower_press.c:    if (button->type == BUTTON_TOWER_ONE) {
+game/events/button_tower_press.c:        if (!(tower->texture = \
+game/events/button_tower_press.c:        tower->type = TOWER_ONE;
+game/events/button_tower_press.c:        tower->price = 20;
+game/events/button_tower_press.c:    if (button->type == BUTTON_TOWER_TWO) {
+game/events/button_tower_press.c:        if (!(tower->texture = \
+game/events/button_tower_press.c:        tower->type = TOWER_TWO;
+game/events/button_tower_press.c:        tower->price = 40;
+game/events/button_tower_press.c:    button_t *button = scene->button;
+game/events/button_tower_press.c:    tower_move_t *tower_move = scene->objs->tower_move;
+game/events/button_tower_press.c:    for (; button->activate == false; button = button->next);
+game/events/button_tower_press.c:    tower_move->sprite = sfSprite_create();
+game/events/button_tower_press.c:    tower_move->size = init_vec2f(button->size.x, button->size.y);
+game/events/button_tower_press.c:    tower_move->rect = init_intrect(0, 0, button->size.x, button->size.y);
+game/events/button_tower_press.c:    tower_move->color = init_color(100, 100, 100, 100);
+game/events/button_tower_press.c:    tower_move->circle = sfCircleShape_create();
+game/events/button_tower_press.c:    tower_move->pos = init_vec2f(-500, 0);
+game/events/button_tower_press.c:    if (!(tower_move->music = sfMusic_createFromFile("musics/money.ogg")))
+game/events/button_tower_press.c:    sfCircleShape_setRadius(tower_move->circle, 200);
+game/events/button_tower_press.c:    sfCircleShape_setFillColor(tower_move->circle, tower_move->color);
+game/events/button_tower_press.c:    scene->objs->tower_move = tower_move;
+game/events/keyboard_is_pressed.c:    button_t *button = scene->button;
+game/events/keyboard_is_pressed.c:    for (; button->type != BUTTON_PLAY_PAUSE; button = button->next);
+game/events/keyboard_is_pressed.c:    button->activate = true;
+game/events/keyboard_is_pressed.c:    scene = button->callback(scene);
+game/events/keyboard_is_pressed.c:    button->activate = false;
+game/events/change_speed.c:        game_object->speed_x += (x < 0 ? 0.6 : -0.6);
+game/events/change_speed.c:        game_object->speed_y += (y < 0 ? 0.6 : -0.6);
+game/events/change_speed.c:        game_object->speed_x += (x < 0 ? 1.2 : -1.2);
+game/events/change_speed.c:        game_object->speed_y += (y < 0 ? 1.2 : -1.2);
+game/events/change_speed.c:            game_object->speed_x += (x < 0 ? -0.3 : 0.3);
+game/events/change_speed.c:            game_object->speed_y += (y < 0 ? -0.3 : 0.3);
+game/events/change_speed.c:            game_object->speed_x += (x < 0 ? -0.6 : 0.6);
+game/events/change_speed.c:            game_object->speed_y += (y < 0 ? -0.6 : 0.6);
+game/events/change_speed.c:        rocket->speed += 1;
+game/events/change_speed.c:        rocket->speed = 3;
+game/events/change_speed.c:    button_t *button = scene->button;
+game/events/change_speed.c:    rocket_t *rocket = scene->objs->rocket;
+game/events/change_speed.c:    game_object_t *game_object = scene->objs->game_object;
+game/events/change_speed.c:    for (; button->type != BUTTON_FUNGUS; button = button->next);
+game/events/change_speed.c:    left = button->rect.left;
+game/events/change_speed.c:    for (; game_object->prev; game_object = game_object->prev);
+game/events/change_speed.c:    for (; game_object; game_object = game_object->next) {
+game/events/change_speed.c:        if (game_object->tower == NO_TOWER)
+game/events/change_speed.c:            change_speed_game_object(game_object, button->rect.left,
+game/events/change_speed.c:            game_object->speed_x, game_object->speed_y);
+game/events/change_speed.c:    for (; rocket; rocket = rocket->next)
+game/events/change_speed.c:        change_speed_rocket(rocket, button->rect.left);
+game/events/change_speed.c:    scene->objs->speed += (left == 0 || left == 75) ? 1 : -2;
+game/events/change_speed.c:    button->rect.left += (button->rect.left != 150) ? 75 : -150;
+game/events/put_tower_or_not.c:    for (; game_object->next; game_object = game_object->next);
+game/events/put_tower_or_not.c:    if (!(game_object->next = malloc(sizeof(game_object_t))))
+game/events/put_tower_or_not.c:    game_object->next->prev = game_object;
+game/events/put_tower_or_not.c:    game_object = game_object->next;
+game/events/put_tower_or_not.c:    game_object->tower = tower_move->type;
+game/events/put_tower_or_not.c:    game_object->texture = tower_move->texture;
+game/events/put_tower_or_not.c:    game_object->sprite = tower_move->sprite;
+game/events/put_tower_or_not.c:    game_object->pos = tower_move->pos;
+game/events/put_tower_or_not.c:    game_object->size = tower_move->size;
+game/events/put_tower_or_not.c:    game_object->rect = tower_move->rect;
+game/events/put_tower_or_not.c:    game_object->next = NULL;
+game/events/put_tower_or_not.c:    float e_x = emplacement->pos.x;
+game/events/put_tower_or_not.c:    float e_y = emplacement->pos.y;
+game/events/put_tower_or_not.c:    float t_x = tower_move->pos.x;
+game/events/put_tower_or_not.c:    float t_y = tower_move->pos.y;
+game/events/put_tower_or_not.c:    float t_s_y = tower_move->size.y;
+game/events/put_tower_or_not.c:    if (e_x < t_x && e_x + emplacement->size.x > t_x + 90) {
+game/events/put_tower_or_not.c:        if (e_y < t_y + 90 && e_y + emplacement->size.y > t_y + t_s_y)
+game/events/put_tower_or_not.c:    for (; game_object->prev; game_object = game_object->prev);
+game/events/put_tower_or_not.c:    for (; game_object; game_object = game_object->next) {
+game/events/put_tower_or_not.c:        if (game_object->tower != NO_TOWER)
+game/events/put_tower_or_not.c:    if (scene->texts->money->nb - tower_move->price < 0)
+game/events/put_tower_or_not.c:    scene->texts->money->nb -= tower_move->price;
+game/events/put_tower_or_not.c:    emplacement_t *emplacement = scene->objs->emplacement;
+game/events/put_tower_or_not.c:    game_object_t *game_object = scene->objs->game_object;
+game/events/put_tower_or_not.c:    for (; emplacement; emplacement = emplacement->next) {
+game/events/put_tower_or_not.c:    tower_move_t *tower_move = scene->objs->tower_move;
+game/events/put_tower_or_not.c:            sfMusic_play(scene->music->music_money);
+game/events/put_tower_or_not.c:            put_tower_at_the_end(scene->objs->game_object, tower_move);
+game/events/put_tower_or_not.c:            sfCircleShape_destroy(tower_move->circle);
+game/events/put_tower_or_not.c:            sfTexture_destroy(tower_move->texture);
+game/events/put_tower_or_not.c:            sfSprite_destroy(tower_move->sprite);
+game/events/put_tower_or_not.c:        scene->objs->tower_move = NULL;
+game/events/button_is_clicked.c:    if (tmp.x > button->pos.x && tmp.x < button->pos.x + button->size.x) {
+game/events/button_is_clicked.c:        if (tmp.y > button->pos.y && tmp.y < button->pos.y + button->size.y)
+game/events/button_is_clicked.c:    int check = -1;
+game/events/button_is_clicked.c:    button_t *button = (*scene)->button;
+game/events/button_is_clicked.c:    tower_move_t *tower_move = (*scene)->objs->tower_move;
+game/events/button_is_clicked.c:        (*scene)->objs->tower_move->pos = init_vec2f(mouse.x, mouse.y);
+game/events/button_is_clicked.c:    for (; button; button = button->next) {
+game/events/button_is_clicked.c:            button->activate = true;
+game/events/button_is_clicked.c:            (*scene) = button->callback((*scene));
+game/events/button_is_clicked.c:            button->activate = false;
+game/events/function_callback.c:    scene = scene->next;
+game/events/function_callback.c:    scene = scene->next;
+game/events/function_callback.c:    for (; rocket->next; rocket = rocket->next) {
+game/events/function_callback.c:        if (rocket->pause == false)
+game/events/function_callback.c:            rocket->pause = true;
+game/events/function_callback.c:            rocket->pause = false;
+game/events/function_callback.c:    if (rocket->pause == false)
+game/events/function_callback.c:        rocket->pause = true;
+game/events/function_callback.c:        rocket->pause = false;
+game/events/function_callback.c:    for (; rocket->prev; rocket = rocket->prev);
+game/events/function_callback.c:    button_t *button = scene->button;
+game/events/function_callback.c:    game_object_t *game_object = scene->objs->game_object;
+game/events/function_callback.c:    for (; button->activate != true; button = button->next);
+game/events/function_callback.c:    button->rect.left += (button->rect.left == 93) ? -93 : 93;
+game/events/function_callback.c:    for (; game_object->prev; game_object = game_object->prev);
+game/events/function_callback.c:    if (button->rect.left == 0) {
+game/events/function_callback.c:        for (; game_object; game_object = game_object->next)
+game/events/function_callback.c:            game_object->display = false;
+game/events/function_callback.c:        for (; game_object; game_object = game_object->next)
+game/events/function_callback.c:            game_object->display = true;
+game/events/function_callback.c:    if (scene->texts->money->display == true)
+game/events/function_callback.c:        scene->texts->money->display = false;
+game/events/function_callback.c:        scene->texts->money->display = true;
+game/events/function_callback.c:    scene->objs->pause = (scene->objs->pause == false) ? true : false;
+game/events/function_callback.c:    if (scene->objs->rocket)
+game/events/function_callback.c:        scene->objs->rocket = pause_rocket(scene->objs->rocket);
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/function_callback_sett.c:    scene = scene->prev;
+game/events/touch_other_tower.c:    float g_x = game_object->pos.x;
+game/events/touch_other_tower.c:    float g_y = game_object->pos.y;
+game/events/touch_other_tower.c:    float t_x = tower->pos.x;
+game/events/touch_other_tower.c:    float t_y = tower->pos.y;
+game/events/touch_other_tower.c:    float t_s_y = tower->size.y;
+game/events/touch_other_tower.c:        if (t_y + 110 > g_y + 80 && t_y + 110 < g_y + game_object->size.y)
+game/events/touch_other_tower.c:        if (t_y + t_s_y > g_y + 80 && t_y + t_s_y < g_y + game_object->size.y)
+game/events/events_game_sett.c:    button_t *button = (*scene)->button;
+game/events/events_game_sett.c:    for (; button; button = button->next) {
+game/events/events_game_sett.c:            (*scene) = button->callback((*scene));
+settings/draw.c:    for (;music->prev != NULL; music = music->prev);
+settings/draw.c:    sfRenderWindow_drawSprite(window, music->sprite_ast, NULL);
+settings/draw.c:    sfRenderWindow_drawSprite(window, music->sprite_star, NULL);
+settings/draw.c:    sfRenderWindow_drawSprite(window, music->next->sprite_ast, NULL);
+settings/draw.c:    if (music->music_play == false || music->next->music_play == false) {
+settings/draw.c:        sfRenderWindow_drawSprite(window, music->next->sprite_star, NULL);
+settings/draw.c:    for (;(*scene)->prev != NULL; (*scene) = (*scene)->prev);
+settings/draw.c:    settings = (*scene)->setting;
+settings/draw.c:    for (;settings->prev != NULL; settings = settings->prev);
+settings/draw.c:    while (settings->type != MUSIC) {
+settings/draw.c:        sfRenderWindow_drawSprite(window, settings->sprite, NULL);
+settings/draw.c:        settings = settings->next;
+settings/draw.c:    event_settings(window, scene, settings->music);
+settings/draw.c:    sfRenderWindow_drawText(window, settings->music->text, NULL);
+settings/draw.c:    draw_music_elements(window, settings->music);
+settings/init/init_settings.c:    setting->texture = sfTexture_createFromFile(str, NULL);
+settings/init/init_settings.c:    setting->pos.y = a;
+settings/init/init_settings.c:    setting->pos.x = b;
+settings/init/init_settings.c:    sfSprite_setTexture(setting->sprite, setting->texture, sfFalse);
+settings/init/init_settings.c:    sfSprite_setPosition(setting->sprite, setting->pos);
+settings/init/init_settings.c:    setting->sprite = sfSprite_create();
+settings/init/init_settings.c:        setting->type = BACKGROUND;
+settings/init/init_settings.c:        setting = set_position(setting, "sprites/menu/fond.jpg", -190, 0);
+settings/init/init_settings.c:        setting->type = FILTER;
+settings/init/init_settings.c:        setting = set_position(setting, "sprites/menu/fond_test.png", -20, 0);
+settings/init/init_settings.c:        setting->type = WINDOW;
+settings/init/init_settings.c:        setting->type = MUSIC;
+settings/init/init_settings.c:        setting->music = fill_musics();
+settings/init/init_settings.c:    setting->prev = NULL;
+settings/init/init_settings.c:        setting->next = malloc(sizeof(sett_t));
+settings/init/init_settings.c:        setting->next->prev = setting;
+settings/init/init_settings.c:        setting = setting->next;
+settings/init/init_settings.c:    setting->next = NULL;
+settings/init/init_settings.c:    for (;setting->prev != NULL; setting = setting->prev);
+settings/init/init_data.c:    music->font = sfFont_createFromFile("fonts/test_2.ttf");
+settings/init/init_data.c:    if (music->font == NULL)
+settings/init/init_data.c:    music->text = sfText_create();
+settings/init/init_data.c:    music->pos_font.x = 885;
+settings/init/init_data.c:    music->pos_font.y = 300;
+settings/init/init_data.c:    sfText_setString(music->text, "MUSIC");
+settings/init/init_data.c:    sfText_setFont(music->text, music->font);
+settings/init/init_data.c:    sfText_setCharacterSize(music->text, 70);
+settings/init/init_data.c:    sfText_setPosition(music->text, music->pos_font);
+settings/init/init_data.c:    music->music_play = true;
+settings/init/init_data.c:    music->sprite_star = sfSprite_create();
+settings/init/init_data.c:    music->sprite_ast = sfSprite_create();
+settings/init/init_data.c:    music->texture_ast = sfTexture_createFromFile(\
+settings/init/init_data.c:    music->texture_star = sfTexture_createFromFile(\
+settings/init/init_data.c:    music->pos_ast.y = 490;
+settings/init/init_data.c:    music->pos_ast.x = 650;
+settings/init/init_data.c:    music->pos_star.y = 420;
+settings/init/init_data.c:    music->pos_star.x = 830;
+settings/init/init_data.c:    sfSprite_setTexture(music->sprite_star, \
+settings/init/init_data.c:    music->texture_star, sfFalse);
+settings/init/init_data.c:    sfSprite_setTexture(music->sprite_ast, \
+settings/init/init_data.c:    music->texture_ast, sfFalse);
+settings/init/init_data.c:    sfSprite_setPosition(music->sprite_star, music->pos_star);
+settings/init/init_data.c:    sfSprite_setPosition(music->sprite_ast, music->pos_ast);
+settings/init/init_data.c:    music->sprite_star = sfSprite_create();
+settings/init/init_data.c:    music->sprite_ast = sfSprite_create();
+settings/init/init_data.c:    music->texture_ast = sfTexture_createFromFile(\
+settings/init/init_data.c:    music->texture_star = sfTexture_createFromFile(\
+settings/init/init_data.c:    music->pos_ast.y = 430;
+settings/init/init_data.c:    music->pos_ast.x = 1120;
+settings/init/init_data.c:    music->pos_star.y = 430;
+settings/init/init_data.c:    music->pos_star.x = 1120;
+settings/init/init_data.c:    sfSprite_setTexture(music->sprite_star, music->texture_star, sfFalse);
+settings/init/init_data.c:    sfSprite_setTexture(music->sprite_ast, music->texture_ast, sfFalse);
+settings/init/init_data.c:    sfSprite_setPosition(music->sprite_star, music->pos_star);
+settings/init/init_data.c:    sfSprite_setPosition(music->sprite_ast, music->pos_ast);
+settings/init/init_data.c:    music->music_play = true;
+settings/init/init_data.c:    music->prev = NULL;
+settings/init/init_data.c:    if ((music->next = malloc(sizeof(music_s_t))) == NULL)
+settings/init/init_data.c:    music->next->prev = music;
+settings/init/init_data.c:    music->next = initialize_sprite_cut_music(music->next);
+settings/init/init_data.c:    music->next->next = NULL;
+settings/events_music.c:    music->pos_star.x = mouse_pos.x;
+settings/events_music.c:    if (music->pos_star.x <= 730)
+settings/events_music.c:        music->pos_star.x = 730;
+settings/events_music.c:    if (music->pos_star.x >= 830)
+settings/events_music.c:        music->pos_star.x = 830;
+settings/events_music.c:    sfSprite_setPosition(music->sprite_star, music->pos_star);
+settings/events_music.c:    sfSprite_setTexture(music->sprite_star, music->texture_star, sfFalse);
+settings/events_music.c:    sfRenderWindow_drawSprite(window, music->sprite_star, NULL);
+settings/events_music.c:        music->music_play == false) {
+settings/events_music.c:        sfMusic_play((*scene)->menu_background->music);
+settings/events_music.c:        music->music_play = true;
+settings/events_music.c:        sfMusic_pause((*scene)->menu_background->music);
+settings/events_music.c:        music->music_play = false;
+settings/events_music.c:            (*scene)->type == SETTINGS)
+settings/events_music.c:            (*scene)->type = MENU;
+settings/events_music.c:        if (mouse_pos.x >= music->pos_star.x + 20 && \
+settings/events_music.c:            mouse_pos.x <= music->pos_star.x + 100 && \
+settings/events_music.c:            mouse_pos.y >= music->pos_star.y + 20 && \
+settings/events_music.c:            mouse_pos.y <= music->pos_star.y + 100 && \
+intro/access/access_ll.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/access/access_ll.c:    for (; intro->type != BUBLE; intro = intro->next);
+intro/access/access_ll.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/access/access_ll.c:    for (; intro->type != EXPLOSION; intro = intro->next);
+intro/access/access_ll.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/access/access_ll.c:    for (; intro->type != WIZARD1; intro = intro->next);
+intro/access/access_ll.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/access/access_ll.c:    for (; intro->type != BACK; intro = intro->next);
+intro/access/access_ll.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/access/access_ll.c:    for (; intro->type != SPACE; intro = intro->next);
+intro/display.c:        sprite = intro->space->sprite_1;
+intro/display.c:        texture = intro->space->texture_1;
+intro/display.c:        sprite = intro->space->sprite_2;
+intro/display.c:        texture = intro->space->texture_2;
+intro/display.c:    sfSprite_setPosition(sprite, intro->space->pos);
+intro/display.c:        (*scene)->intro = access_green_wizard((*scene)->intro);
+intro/display.c:            (*scene)->intro = access_green_wizard((*scene)->intro);
+intro/display.c:            (*scene)->intro->user_click += 1;
+intro/display.c:    (*scene)->intro = access_background((*scene)->intro);
+intro/display.c:    sfRenderWindow_drawSprite(window, (*scene)->intro->sprite, NULL);
+intro/display.c:    draw_space_event(window, (*scene)->intro, clock);
+intro/display.c:    (*scene)->intro = access_green_wizard((*scene)->intro);
+intro/display.c:    if ((*scene)->intro->user_click > 4)
+intro/display.c:        (*scene)->type = MENU;
+intro/display.c:    if ((*scene)->intro->user_click >= 1)
+intro/display.c:        display_intro_wizards((*scene)->intro, window);
+intro/init/fill_data.c:    space->texture_1 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    space->sprite_1 = sfSprite_create();
+intro/init/fill_data.c:    space->texture_2 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    space->sprite_2 = sfSprite_create();
+intro/init/fill_data.c:    space->pos.x = 300;
+intro/init/fill_data.c:    space->pos.y = 70;
+intro/init/fill_data.c:    space->clock = sfClock_create();
+intro/init/fill_data.c:    bubble->texture_1 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    bubble->sprite_1 = sfSprite_create();
+intro/init/fill_data.c:    bubble->texture_2 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    bubble->sprite_2 = sfSprite_create();
+intro/init/fill_data.c:    bubble->pos.x = 910;
+intro/init/fill_data.c:    bubble->pos.y = 570;
+intro/init/fill_data.c:    bubble->pos_2.x = 350;
+intro/init/fill_data.c:    bubble->pos_2.y = 470;
+intro/init/fill_data.c:    smoke->texture_1 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    smoke->sprite_1 = sfSprite_create();
+intro/init/fill_data.c:    smoke->texture_2 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    smoke->sprite_2 = sfSprite_create();
+intro/init/fill_data.c:    smoke->pos.x = 1620;
+intro/init/fill_data.c:    smoke->pos.y = -500;
+intro/init/fill_data.c:    smoke->pos_2.x = 1840;
+intro/init/fill_data.c:    smoke->pos_2.y = -500;
+intro/init/fill_data.c:    bomb->texture_1 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    bomb->sprite_1 = sfSprite_create();
+intro/init/fill_data.c:    bomb->texture_2 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    bomb->sprite_2 = sfSprite_create();
+intro/init/fill_data.c:    bomb->pos.x = 1800;
+intro/init/fill_data.c:    bomb->pos.y = -100;
+intro/init/fill_data.c:    bomb->pos_2.x = 1720;
+intro/init/fill_data.c:    bomb->pos_2.y = -100;
+intro/init/fill_data.c:    bomb->texture_3 = sfTexture_createFromFile(\
+intro/init/fill_data.c:    bomb->sprite_3 = sfSprite_create();
+intro/init/fill_data.c:    bomb->pos_3.x = 1500;
+intro/init/fill_data.c:    bomb->pos_3.y = -200;
+intro/init/fill_data.c:    bomb->clock = sfClock_create();
+intro/init/fill_intro_data.c:    intro->texture = sfTexture_createFromFile(str, NULL);
+intro/init/fill_intro_data.c:    intro->pos.y = a;
+intro/init/fill_intro_data.c:    intro->pos.x = b;
+intro/init/fill_intro_data.c:    sfSprite_setTexture(intro->sprite, intro->texture, sfFalse);
+intro/init/fill_intro_data.c:    sfSprite_setPosition(intro->sprite, intro->pos);
+intro/init/fill_intro_data.c:        intro->type = ATTACK;
+intro/init/fill_intro_data.c:        intro->rect.top = 0;
+intro/init/fill_intro_data.c:        intro->rect.left = 0;
+intro/init/fill_intro_data.c:        intro->rect.width = 225;
+intro/init/fill_intro_data.c:        intro->rect.height = 250;
+intro/init/fill_intro_data.c:        intro->clock = sfClock_create();
+intro/init/fill_intro_data.c:        intro->type = EXPLOSION;
+intro/init/fill_intro_data.c:        intro->space = fill_bombs(intro->space);
+intro/init/fill_intro_data.c:        intro->type = SMOKE;
+intro/init/fill_intro_data.c:        intro->space = fill_smoke(intro->space);
+intro/init/fill_intro_data.c:        intro->type = WIZARD1;
+intro/init/fill_intro_data.c:        "sprites/intro/walk_green.png", 750, -100);
+intro/init/fill_intro_data.c:        intro->rect.top = 0;
+intro/init/fill_intro_data.c:        intro->rect.left = 0;
+intro/init/fill_intro_data.c:        intro->rect.width = 225;
+intro/init/fill_intro_data.c:        intro->rect.height = 250;
+intro/init/fill_intro_data.c:        intro->clock = sfClock_create();
+intro/init/fill_intro_data.c:        intro->type = SPACE;
+intro/init/fill_intro_data.c:        intro->space = fill_space_event(intro->space);
+intro/init/fill_intro_data.c:        intro->type = BUBLE;
+intro/init/fill_intro_data.c:        intro->space = fill_bubble_event(intro->space);
+intro/init/fill_intro_data.c:    intro->sprite = sfSprite_create();
+intro/init/fill_intro_data.c:    intro->user_click = 0;
+intro/init/fill_intro_data.c:        intro->type = BACK;
+intro/init/fill_intro_data.c:        "sprites/intro/intro.png", -30, 0);
+intro/init/fill_intro_data.c:    intro->prev = NULL;
+intro/init/fill_intro_data.c:        if ((intro->next = malloc(sizeof(intro_t))) == NULL)
+intro/init/fill_intro_data.c:        intro->next->prev = intro;
+intro/init/fill_intro_data.c:        intro = intro->next;
+intro/init/fill_intro_data.c:    intro->next = NULL;
+intro/init/fill_intro_data.c:    for (;intro->prev != NULL; intro = intro->prev);
+intro/wizard.c:    for (; intro->prev != NULL; intro = intro->prev);
+intro/wizard.c:    for (; intro->type != ATTACK; intro = intro->next);
+intro/wizard.c:    if (sfClock_getElapsedTime(intro->clock).microseconds > 120000) {
+intro/wizard.c:        intro->rect.left += 250;
+intro/wizard.c:        sfClock_restart(intro->clock);
+intro/wizard.c:    if (intro->rect.left >= 1800)
+intro/wizard.c:        intro->rect.left = 0;
+intro/wizard.c:    sfSprite_setPosition(intro->sprite, intro->pos);
+intro/wizard.c:    sfSprite_setTextureRect(intro->sprite, intro->rect);
+intro/wizard.c:    sfSprite_setTexture(intro->sprite, intro->texture, sfFalse);
+intro/wizard.c:    sfRenderWindow_drawSprite(window, intro->sprite, NULL);
+intro/wizard.c:    if (intro->user_click == 1) {
+intro/wizard.c:    if (intro->user_click >= 2 && intro->user_click < 4) {
+intro/wizard.c:        intro->pos.x = 800;
+intro/wizard.c:        set_display(intro->sprite, intro->texture, window, intro->pos);
+intro/wizard.c:    if (intro->user_click == 3) {
+intro/wizard.c:        set_display(intro->space->sprite_1, \
+intro/wizard.c:        intro->space->texture_1, window, intro->space->pos);
+intro/wizard.c:    if (intro->user_click >= 4) {
+intro/wizard.c:        set_display(intro->space->sprite_2, intro->space->texture_2, \
+intro/wizard.c:        window, intro->space->pos_2);
+intro/wizard.c:    if (sfClock_getElapsedTime(intro->clock).microseconds > 100000 \
+intro/wizard.c:        && intro->pos.x < 800) {
+intro/wizard.c:        intro->rect.left += 250;
+intro/wizard.c:        sfClock_restart(intro->clock);
+intro/wizard.c:    if (intro->rect.left >= 1980)
+intro/wizard.c:        intro->rect.left = 0;
+intro/wizard.c:    if (intro->pos.x >= 800) {
+intro/wizard.c:        intro->pos.x = 800;
+intro/wizard.c:    intro->pos.x += 4;
+intro/wizard.c:    sfSprite_setPosition(intro->sprite, intro->pos);
+intro/wizard.c:    sfSprite_setTextureRect(intro->sprite, intro->rect);
+intro/wizard.c:    sfSprite_setTexture(intro->sprite, intro->texture, sfFalse);
+intro/wizard.c:    sfRenderWindow_drawSprite(window, intro->sprite, NULL);
+intro/bombs.c:    if (sfClock_getElapsedTime(intro->space->clock).microseconds \
+intro/bombs.c:        intro->space->pos.y += 10;
+intro/bombs.c:        intro->space->pos_2.y += 8;
+intro/bombs.c:        intro->space->pos_3.y += 12;
+intro/bombs.c:        sfClock_restart(intro->space->clock);
+intro/bombs.c:    if (intro->space->pos.y >= 500) {
+intro/bombs.c:        intro->space->pos.y = -300;
+intro/bombs.c:        intro->space->pos_2.y = -300;
+intro/bombs.c:        intro->space->pos_3.y = -600;
+intro/bombs.c:    set_display(intro->space->sprite_1, \
+intro/bombs.c:    intro->space->texture_1, window, intro->space->pos);
+intro/bombs.c:    set_display(intro->space->sprite_2, \
+intro/bombs.c:    intro->space->texture_2, window, intro->space->pos_2);
+intro/bombs.c:    set_display(intro->space->sprite_3, \
+intro/bombs.c:    intro->space->texture_3, window, intro->space->pos_3);
