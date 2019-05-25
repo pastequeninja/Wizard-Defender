@@ -6,4 +6,4 @@ Projet réalisé à deux :
 - Portée des tours
 - Système de collision
 
-Obtention grade A au module Graphique
+# Obtention grade A
