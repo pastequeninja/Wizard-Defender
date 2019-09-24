@@ -1,9 +1,11 @@
-# my_defender
+# Wizard Defender - Tower Defense 
 
-Projet réalisé à deux :
-- Boutons génériques
-- Possède une fin avec récompense
-- Portée des tours
-- Système de collision
+- ✅ Organisation des objets respectée
+- ✅ Possède une fin avec récompense
+- ✅ Portée des tours
+- ✅ Bruitages plutôt cool
+- ✅ Système de 'Shop'
+- ✅ Pouvoir d'accélerer le temps
+- ✅ Système de collision
 
-# Obtention grade A
+# Obtention grade A 💁🏻
