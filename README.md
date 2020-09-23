@@ -7,5 +7,3 @@
 - ✅ Système de 'Shop'
 - ✅ Pouvoir d'accélerer le temps
 - ✅ Système de collision
-
-# Obtention grade A 💁🏻
